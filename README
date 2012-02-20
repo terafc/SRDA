@@ -1,0 +1,126 @@
+=======
+IDEA :
+=======
+-Autoriser les étudiants à créer leur propre sujet.
+-Permettre à un étudiant d'éditer un rendu qu'il a déjà envoyé.
+-Ajouter une interface Administrateur, afin d'ajouter des élèves, des professeurs, des promos, des alias...
+-Cryptage des rendu reçu, afin que seul le créateur d'un sujet puisse lire les rendus.
+-Etendre l'application à tout les étudiants de l'IUT.
+-Ajouter une page de contact pour les créateurs du site, afin de les remercier de leur travail =)
+
+
+=======
+TO DO :
+=======
+
+TeraFc:
+-Vérification des nouveaux models, sécurisation des variables, des accèss(15%).
+-Test sur url rewriting (10%). 
+-Ajout de photo trombinoscope. (0%)
+-Mettre en place les .htaccess et commencer les tests.
+	==> A tester -> Pour la sécurité :
+		*deny from all
+			/application
+			/bdd
+			/backUp
+		*allow from all
+			/application/controller/documentsController.php
+			/application/js
+			/application/css
+			/application/img
+		*Ajouter Permission
+			Dossier 755 ?
+			Fichier 750 ?
+
+
+Serge-974:
+- Ajout de photo trombinoscope. (0%)
+- Interface Admin (0%)
+- Tâches CRON (10%)
+- Ajout de motifs (@Date, @ID) (100%)
+- Ajout d'un scrollbar pour les sujets, notifications, ... (100%)
+
+
+Loic:
+- Mise en forme des photos du trombinoscope (Nommage, Classement par promo)
+- Compte Rendu
+- 
+
+Florent:
+-Remplir TOUTES les adresses mail en BDD
+-Amélioration du design (ok)
+-Aggrandissement du site  (ok)
+-Mise à jour de la BDD (ok)
+
+DOCUMENTATION GIT APTANA :
+
+Prérequis :
+-----------
+-le paquet "EGIT"
+-Github et un compte valable
+
+Installation :
+--------------
+MANIPULATION 1:
+---------------
+1-Menu Help/Install>New Software>Available Software Sites et cocher la source "Eclipse" puis OK
+2-Selectionner "--All Available Sites--" dans l'onglet "work with" puis chercher et cocher le paquet egit ( catégorie collaboration)
+3-Redémarrer Aptana apres installation du paquet
+
+Configuration :
+--------------
+MANIPULATION 2:
+---------------
+*Créer un nouveau "repository" correpondant au projet sur Github.com si il n'existe pas deja
+
+*Generer une clé ssh pour la connexion ssh à github :
+-Ouvrir la console dans aptana puis taper:
+ssh-keygen -t rsa -C "adresse@mail.com"
+-Copier la clé ssh generé (C:\Users\user\.ssh\id_rsa.pub) dans les clés autorisé ( deploy keys) sur Github.com dans le projet concerné
+-Copier les fichiers contenu dans C:\Users\user\.ssh\ vers C:\Users\user\ssh\
+
+*Configurer Aptana ( mode Graphique):
+================================================================
+1er CAS : Lorsque le projet n'existe pas encore sur Github.com |
+================================================================
+MANIPULATION 3 :
+---------------
+1-Créer un nouveau projet Rails ( Rails project) avec l'option "use the standard "rails generator"
+2-puis copier le contenu du projet existant dans le dossier du projet rails
+3-Clicker droit sur le projet dans Aptana , onglet Team>share project
+4-Selectionner Git et non Git Aptana puis Create Repository et enfin Finish
+5-De nouveau dans Team>Commit, selectionner les fichiers a commiter et mettre un commentaire pour le premier commit
+6-Aller de nouveau dans Team>Remote>Push et copier l'url du projet dans le champ URI (git@github.com:terafc/SRDA.git) puis next
+7-Dans l'onglet suivant selectionner 'refs/heads/master' dans le champs "Source ref:" puis next
+
+==> Ces actions auront pour effets de créer automatiquement et d'envoyer le projet sur Github.com
+
+Remarque : Pour recevoir les modification, il est nécessaire de passer par la console car la fonction pull du paquet EGIT contient quelque bug
+MANIPULATION 4:
+---------------
+Ouvrez la console d'Aptana ( Faire attention de bien selectionner le dossier du projet dans l'onglet "Project Explorer"avant d'ouvrir la console)
+1-
+git config --global user.name "votre_nom"
+git config --global user.mail "adresse@mail.com"
+git remote add origin "git@github.com:terafc/projet.git"
+2-Enfin , entrer la commande suivante pour recevoir ( pull) les modifications du projet :
+git pull origin
+
+========================================================
+2eme CAS : Lorsque le projet existe deja sur Github.com |
+========================================================
+MANIPULATION 5:
+---------------
+1-Créer un nouveau projet Rails ( Rails project) avec l'option "Clone a existing git project" puis collez dans le champs l'URL du repository du projet
+ 
+Cette manipulation clonera le projet present sur Github.com dans l'espace de travail d'Aptana dans lequel on pourra effectuer des modification et ensuite 'pusher'
+
+2-Pour envoyer les modification refaite la MANIPULATION 3 à partir de l'etape 5
+
+3-Pour recevoir les modifications (pull) refaire la MANIPULATION 4
+
+
+
+                          
+
+
