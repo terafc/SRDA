@@ -22,7 +22,7 @@ function getListe($promo) {
 	//Si il s'agit des étudiants
 	elseif(in_array($promo, $listePromo)){
 		$bdd = connexionBase();//Connexion BDD
-		$requete = "select nom_etd, prenom_etd,email_etd from etudiant where promo=:promo";//Requete
+		$requete = "select nom_etd, prenom_etd,email_etd,num_etd,promo from etudiant where promo=:promo";//Requete
 		$res = $bdd->prepare($requete);//préparation
 		$res->bindParam(':promo', $promo);
 		$res->execute();//exécution
@@ -30,6 +30,8 @@ function getListe($promo) {
 			$result[$i]['nom'] = $valeur['nom_etd'];
 			$result[$i]['prenom'] = $valeur['prenom_etd'];
 			$result[$i]['email'] = $valeur['email_etd'];
+			$result[$i]['id']=$valeur['num_etd'];
+			$result[$i]['promo']=$valeur['promo'];
 			$i++;
 		}
 	}

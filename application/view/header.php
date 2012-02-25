@@ -36,7 +36,7 @@
 </div>
 <ul id="nav-one" class="dropmenu">
 	<li><a href="<?php echo HTTP_INDEX;?>?page=accueil&action=show" class="lien1">Accueil</a></li>
-	<li><a href="#" class="lien3">Documents</a>
+	<li><a href="javascript:void(0);" class="lien3">Documents</a>
 		<ul> 
 			<li><a href="<?php echo HTTP_INDEX;?>?page=documents&action=documents"><?php echo $doc;?></a></li> 
 			<?php if(isset($upl)){ ?>
@@ -47,7 +47,7 @@
 			<?php } ?>
 		</ul>
 	</li>
-	<li><a href="#" class="lien3">Etd/Ens</a>
+	<li><a href="javascript:void(0);" class="lien3">Etd/Ens</a>
 		<ul> 
 			<li><a href="<?php echo HTTP_INDEX;?>?page=trombi&action=RT1">RT1</a></li> 
 			<li><a href="<?php echo HTTP_INDEX;?>?page=trombi&action=RT2">RT2</a></li> 
