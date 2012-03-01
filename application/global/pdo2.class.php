@@ -2,9 +2,7 @@
 
 /**
  * Classe implémentant le singleton pour PDO
- * @author Savageman
- */
-
+ **/
 class PDO2 extends PDO {
 
 	private static $_instance;
