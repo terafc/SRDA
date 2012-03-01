@@ -1,0 +1,15 @@
+#Autorisation d'access
+#-----------------------
+Options -Indexes
+Deny from All
+
+#Redirection des erreurs
+#-----------------------
+ErrorDocument 403 /SRDA/accueil/show
+
+# Réecriture d'URL
+#------------------
+Options FollowSymLinks
+RewriteEngine on
+RewriteRule ^([a-z]+)/([a-zA-Z0-9]+)$ index.php?page=$1&action=$2 [L]
+

@@ -1,0 +1,27 @@
+#Demande d'un utilisateur authentifié valide
+#-------------------------------------------
+AuthName "Page d'administration protégée"
+AuthType Basic
+AuthUserFile "C:\wamp\www\SRDA\administration\.htpasswd"
+Require valid-user
+
+#Autorisation d'access
+#---------------------
+Options -Indexes
+
+#Redirection des erreurs
+#-----------------------
+ErrorDocument 403 /SRDA/administration/error/403
+ErrorDocument 404 /SRDA/administration/error/404
+ErrorDocument 500 /SRDA/administration/error/500
+
+# Réecriture d'URL
+#------------------
+Options FollowSymLinks
+RewriteEngine on
+RewriteRule ^([a-z]+)/([a-zA-Z0-9]+)$ indexAdministration.php?page=$1&action=$2 [L]
+deny from all
+
+<Files indexAdministration.php>
+	allow from all
+</Files>

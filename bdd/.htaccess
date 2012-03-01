@@ -1,0 +1,7 @@
+#AuthUserFile C:\wamp\www\SRDA\.htpasswd
+#AuthGroupFile /dev/null
+#DirectoryIndex index.php
+Options -Indexes
+
+Deny from All
+
