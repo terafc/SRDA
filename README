@@ -3,54 +3,10 @@ IDEA :
 =======
 -Autoriser les étudiants à créer leur propre sujet.
 -Permettre à un étudiant d'éditer un rendu qu'il a déjà envoyé.
--Ajouter une interface Administrateur, afin d'ajouter des élèves, des professeurs, des promos, des alias...
+-Ajouter une interface Administrateur, afin d'ajouter des élèves, des professeurs, des promos, des alias... (100%)
 -Cryptage des rendu reçu, afin que seul le créateur d'un sujet puisse lire les rendus.
 -Etendre l'application à tout les étudiants de l'IUT.
 -Ajouter une page de contact pour les créateurs du site, afin de les remercier de leur travail =)
-
-
-=======
-TO DO :
-=======
-
-TeraFc:
--Vérification des nouveaux models, sécurisation des variables, des accèss(15%).
--Test sur url rewriting (10%). 
--Ajout de photo trombinoscope. (0%)
--Mettre en place les .htaccess et commencer les tests.
-	==> A tester -> Pour la sécurité :
-		*deny from all
-			/application
-			/bdd
-			/backUp
-		*allow from all
-			/application/controller/documentsController.php
-			/application/js
-			/application/css
-			/application/img
-		*Ajouter Permission
-			Dossier 755 ?
-			Fichier 750 ?
-
-
-Serge-974:
-- Ajout de photo trombinoscope. (0%)
-- Interface Admin (0%)
-- Tâches CRON (10%)
-- Ajout de motifs (@Date, @ID) (100%)
-- Ajout d'un scrollbar pour les sujets, notifications, ... (100%)
-
-
-Loic:
-- Mise en forme des photos du trombinoscope (Nommage, Classement par promo)
-- Compte Rendu
-- 
-
-Florent:
--Remplir TOUTES les adresses mail en BDD
--Amélioration du design (ok)
--Aggrandissement du site  (ok)
--Mise à jour de la BDD (ok)
 
 DOCUMENTATION GIT APTANA :
 

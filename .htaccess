@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #Autorisation d'access
 #---------------------
 Options -Indexes
@@ -12,7 +11,7 @@ ErrorDocument 403 /SRDA/accueil/show
 Options FollowSymLinks
 RewriteEngine on
 RewriteRule ^([a-z]+)/([a-zA-Z0-9]+)$ index.php?page=$1&action=$2 [L]
-=======
+
 #Autorisation d'access
 #---------------------
 Options -Indexes
@@ -26,4 +25,3 @@ ErrorDocument 403 /SRDA/accueil/show
 Options FollowSymLinks
 RewriteEngine on
 RewriteRule ^([a-z]+)/([a-zA-Z0-9]+)$ index.php?page=$1&action=$2 [L]
->>>>>>> ae78f1d0434356d805d8f46fe9f752b7b67e7dc0

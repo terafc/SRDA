@@ -10,12 +10,8 @@
 					<td>
 						<?php
 						if(!empty($valeur['promo'])){
-							echo ('<a href="javascript:void(0);"
-							onMouseOver="return overlib(\'\',
-								WIDTH, 84, HEIGHT, 113,LEFT,OFFSETX,30,OFFSETY,-50,BORDER,\'2\',
-								BGCOLOR,\'#2F8CAE\',
-								FGBACKGROUND,\'application/img/trombi/' . $valeur['promo'] . '/' . $valeur['id'] . '.png\');"
-							onMouseOut="return nd();">'.$valeur['nom'].'');
+							$path = 'application/img/trombi/' . $valeur['promo'] . '/' . $valeur['id'] . '.png';
+							echo getTrombi($path,$valeur['nom']);
 						}
 						else{
 							echo $valeur['nom'];
