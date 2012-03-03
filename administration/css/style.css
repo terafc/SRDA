@@ -1,0 +1,775 @@
+html,body
+{
+margin-top:0;
+font-family: "Trebuchet MS", Times, serif;
+background: url(../img/pattern.png) fixed;
+}
+#error
+{
+width:550px;
+margin:0 auto 0 auto;
+}
+#tabfoot
+{
+font-size: 11px;
+width:95%;
+margin:0 auto;
+}
+#tabfoot th
+{
+text-align: left;
+font-variant: small-caps;
+font-size:17px;
+width:200px;
+}
+tabfoot div
+{
+width:180px;
+}
+#all
+{
+width: 770px;
+margin-left: auto;
+margin-right: auto;
+}
+#contenu
+{
+border: 1px solid #999;
+clear:both;
+margin-top:70px;
+background-color: #ddd;
+min-height:380px;
+border-radius:5px 5px 0px 0px;
+overflow:auto;
+}
+#header
+{
+padding-top: 10px;
+margin-left: auto;
+margin-right: auto;
+border-left: 1px solid #999;
+border-right: 1px solid #999;
+background-image: url(../img/pattern2.png);
+
+}
+#footer
+{
+text-align:center; 
+position:relative;
+bottom:0;
+font-size: 12px;
+}
+#barefoot
+{
+background: -webkit-gradient(linear,left top, left bottom,from(#6dcff2),to(#4badd0));
+background: -webkit-linear-gradient(top,#6dcff2,#4badd0);
+background: -moz-linear-gradient(top,#6dcff2,#4badd0);
+background: -o-linear-gradient(top,#6dcff2,#4badd0);
+background: linear-gradient(top,#6dcff2,#4badd0);
+border-right: 1px solid #999;
+border-left: 1px solid #999;
+border-bottom: 1px solid #999;
+border-radius:0px 0px 5px 5px;
+}
+#barefoot hr
+{
+border: 0px solid #999;
+}
+ul
+{
+margin-top: 0px;
+font-family: "Trebuchet MS", Times, serif;
+list-style-type:none;
+padding: 0px 0px 0px 0px;
+}
+li
+{
+margin-right: auto;
+margin-left: auto;
+float:left;
+list-style-type:none;
+}
+#li2
+{
+float:right;
+list-style-type:none;
+}
+a.lien3:link,a.lien3:visited
+{
+height:50px;
+line-height:50px;
+border-bottom: 1px solid #999;
+font-size: 14px;
+display:block;
+font-weight:bold;
+color:#FFFFFF;
+background-color:#00BFFF;
+width:110px;
+text-align:center;
+text-decoration:none;
+text-transform:uppercase;
+}
+a.lien1:link,a.lien1:visited
+{
+height:50px;
+line-height:50px;
+border-bottom: 1px solid #999;
+border-left: 1px solid #999;
+font-size: 14px;
+display:block;
+font-weight:bold;
+color:#FFFFFF;
+background-color:#00BFFF;
+width:110px;
+text-align:center;
+text-decoration:none;
+text-transform:uppercase;
+border-radius:0px 0px 0px 5px;
+}
+a.lien2:link,a.lien2:visited
+{
+height:50px;
+line-height:50px;
+border-bottom: 1px solid #999;
+border-right: 1px solid #999;
+font-size: 14px;
+display:block;
+font-weight:bold;
+color:#FFFFFF;
+background-color:#00BFFF;
+width:108px;
+text-align:center;
+text-decoration:none;
+text-transform:uppercase;
+border-radius:0px 0px 5px 0px;
+}
+a.lien1:hover,a.lien1:active,a.lien2:hover,a.lien2:active,a.lien3:hover,a.lien3:active
+{
+background: -webkit-gradient(linear,left top, left bottom,from(#46d5ff),to(#DDDDDD));
+background: -webkit-linear-gradient(top,#46d5ff,#DDDDDD);
+background: -moz-linear-gradient(top,#46d5ff,#DDDDDD);
+background: -o-linear-gradient(top,#46d5ff,#DDDDDD);
+background: linear-gradient(top,#46d5ff,#DDDDDD);
+}
+.aNormal
+{
+background: -webkit-gradient(linear,left top, left bottom,from(#46d5ff),to(#26a8d9));
+background: -webkit-linear-gradient(top,#46d5ff,#26a8d9);
+background: -moz-linear-gradient(top,#46d5ff,#26a8d9);
+background: -o-linear-gradient(top,#46d5ff,#26a8d9);
+background: linear-gradient(top,#46d5ff,#26a8d9);
+}
+.aHover
+{
+background: -webkit-gradient(linear,left top, left bottom,from(#46d5ff),to(#DDDDDD));
+background: -webkit-linear-gradient(top,#46d5ff,#DDDDDD);
+background: -moz-linear-gradient(top,#46d5ff,#DDDDDD);
+background: -o-linear-gradient(top,#46d5ff,#DDDDDD);
+background: linear-gradient(top,#46d5ff,#DDDDDD);
+}
+h1
+{
+letter-spacing: 3px;
+font-variant: small-caps;
+text-shadow: 5px 5px 5px #696969;
+color:#FFFFFF;
+}
+#header h2, h3
+{
+text-indent:10px;
+letter-spacing: 2px;
+font-variant: small-caps;
+margin-top:0px;
+margin-bottom:0px;
+color:#2F8CAE;
+}
+#header hr
+{
+text-shadow: 1px 1px 5px #636363;
+border:1px solid;
+color: #c3c2C2;
+margin-bottom: 0px;
+}
+#footer hr
+{
+margin: 0px;
+border: 1px solid #00a3ff;
+}
+#footer p
+{
+margin:5px;
+padding:5px;
+}
+#menu
+{
+border-style: solid;
+border-width: 0px;
+margin-left: auto;
+margin-right: auto;
+}
+#articles
+{
+margin-top: 40px;
+margin-bottom:40px;
+border-style: solid;
+border-width: 0px;
+margin-left:auto;
+margin-right:auto;
+width: 95%;
+min-height:300px;
+}
+.articles
+{
+border-style: solid;
+border-width: 0px;
+}
+.tableDiv{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 10px;
+	width:95%;
+}
+.tableSubject{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 10px;
+	width:95%;
+}
+
+.tableExemple{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+width:100%;
+border-collapse:collapse;
+font-weight:normal;
+}
+
+.tableExemple td, .tableExemple th {
+font-size:1em;
+border:1px solid #98bf21;
+padding:3px 7px 2px 7px;
+}
+
+.tableExemple th {
+font-size:1.1em;
+text-align:center;
+padding-top:5px;
+padding-bottom:4px;
+background-color:#A7C942;
+color:#ffffff;
+}
+
+.tableExemple tr.alt td {
+color:#000000;
+background-color:#EAF2D3;
+}
+
+.tableExemple tr.bis td {
+color:#000000;
+background-color:#D3D3D3;
+}
+
+.inlineBlock{
+	display:inline-block;
+}
+
+.inlineBlockTop{
+	display:inline-block;
+	vertical-align: top;
+}
+
+.inlineBlockMiddle{
+	display:inline-block;
+	vertical-align: middle;
+}
+
+.formRow{
+	margin: 0 auto 2px auto;
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5px 5px 5px 5px;
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px 10px;
+    width: 95%;
+}
+
+.formTd1{
+	width:70%;
+}
+.formTd2{
+	width:28%;
+}
+.formTd3{
+	width:48%;
+}
+
+.formTitle{
+    color: #2D3543;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #A4ADD5;
+}
+
+.marginTop10{
+	margin-top:10px;
+}
+
+.formContainer{
+	width:91%;
+	background: none repeat scroll 0 0 #8398BC;
+    margin: 0 auto;
+    padding:10px;
+}
+
+.formSubmit{
+	background: none repeat scroll 0 0 #2F2E43;
+    border: medium none;
+    border-radius: 20px 20px 20px 20px;
+    color: #FFFFFF;
+    font: 18px Georgia,"Times New Roman",Times,serif;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    padding: 7px 25px;
+    text-shadow: 0 1px 1px #000000;
+    text-transform: uppercase;
+}
+
+.aLogout{
+	float:right;
+	margin-right:20px;
+}
+
+#connexion{
+padding-right: 28px;
+font-size: 12px;
+text-align:right;
+width:200px;
+float:right;
+}
+
+form, fieldset, legend, ol, li {
+margin: 0;
+padding: 0;
+}
+
+form#inscrire {
+background: #8398bc;
+border-radius: 5px;
+padding: 20px;
+width: 500px;
+margin: 0 auto 0 auto;
+
+}
+
+form#inscrire fieldset {
+border: none;
+margin-bottom: 10px;
+}
+
+form#inscrire fieldset:last-of-type {
+margin-bottom: 0;
+}
+
+form#inscrire legend {
+color: #2d3543;
+font-size: 16px;
+font-weight: bold;
+padding-bottom: 10px;
+text-shadow: 0px 1px 1px #a4add5;
+}
+
+form#inscrire fieldset fieldset legend {
+color: #111111;
+font-size: 13px;
+font-weight: normal;
+padding-bottom: 0;
+}
+
+form#inscrire ol li {
+background: #b9cf6a;
+background: rgba(255,255,255,.3);
+border-color: #e3ebc3;
+border-color: rgba(255,255,255,.6);
+border-style: solid;
+border-width: 2px;
+border-radius: 5px;
+line-height: 30px;
+list-style: none;
+padding: 5px 10px;
+margin-bottom: 2px;
+width: 480px;
+}
+
+form#inscrire ol ol li {
+background: none;
+border: none;
+float: left;
+}
+
+form#inscrire label {
+float: left;
+font-size: 13px;
+width: 200px;
+}
+
+form#inscrire fieldset fieldset label {
+background:none no-repeat left 50%;
+line-height: 20px;
+padding: 0 0 0 30px;
+width: auto;
+}
+
+form#inscrire fieldset fieldset label:hover {
+cursor: pointer;
+}
+
+form#inscrire input:not([type=submit]):focus,
+form#inscrire textarea:focus {
+background: #eaeaea;
+}
+
+form#inscrire button {
+background: #2f2e43;
+border: none;
+border-radius: 20px;
+color: #ffffff;
+display: block;
+font: 18px Georgia, "Times New Roman", Times, serif;
+letter-spacing: 1px;
+margin-left: 160px;
+padding: 7px 25px;
+text-shadow: 0 1px 1px #000000;
+text-transform: uppercase;
+}
+
+form#inscrire button:hover {
+background: #1d1b25;
+cursor: pointer;
+}
+
+form#inscrire input:not([type=radio]),
+form#inscrire textarea {
+
+background: #ffffff;
+border: none;
+border-radius: 3px;
+font-size: 13px;
+outline: none;
+padding: 5px;
+width: 200px;
+}
+
+.dropmenu{
+background-color: #00BFFF;
+}
+
+.dropmenu li{
+position: relative;
+list-style: none;
+float: left;
+margin: 0px;
+padding: 0px;
+}
+
+.dropmenu li a{
+	height: 22px;
+	display: block;
+	cursor: pointer;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.dropmenu ul{
+	position: absolute;
+	display: none;
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #ccc;
+	background-color: #00BFFF;
+}
+
+.dropmenu ul li{
+	border: 0;
+	float: none;
+}
+
+.dropmenu ul a {
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  white-space: nowrap;
+  display:block;
+  background-color:#26a8d9;
+  text-decoration: none;
+  text-transform: none;
+  padding:5px;
+  text-align:center;
+}
+
+.dropmenu ul a:hover {
+	text-decoration: none;
+	background-color:#1E90FF;
+	background-image: none;
+}
+
+.dropmenu div ul{
+	position: relative;
+	display: block;
+}
+
+.dropmenu li div ul{
+	border: none;
+	background: none;
+	position: relative !important;
+}
+
+.dropmenu li div a{
+	border: none;
+	border-bottom: 1px solid #ccc;
+}
+
+.dropmenu li div div a:hover{
+	color: #000;
+	text-decoration: none;
+}
+
+.search {
+outline: none;
+padding: 5px 5px 5px 30px;
+border: 4px solid #F7F7F7;
+font-size: 1.3em;
+background: #FFF url(../img/search.png) no-repeat 6px 5px;
+border-radius: 0.5em;
+box-shadow: inset rgba(0,0,0, 1) 0px 0px 1px;
+}
+
+.lol{
+	display:inline-block;
+	vertical-align:middle;
+	position: relative;
+	top: 0px;
+	left: 400px;
+}
+
+.NB{
+	font-size:11px;
+	font-style: italic;
+	text-align: center;
+}
+
+.scroll500{
+	max-height:500px;
+	overflow-x:none;
+	overflow-y:auto;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.marginCenter{
+	margin:0 auto;
+}
+/*
+ * CSS Autocomplete
+ */
+.ac_results {
+	padding: 0px;
+	border: 1px solid black;
+	background-color: white;
+	overflow: hidden;
+	z-index: 99999;
+}
+
+.ac_results ul {
+width: 100%;
+list-style-position: outside;
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.ac_results li {
+margin: 0px;
+padding: 2px 5px;
+cursor: default;
+display: block;
+/*
+if width will be 100% horizontal scrollbar will apear
+when scroll mode will be used
+*/
+/*width: 100%;*/
+font: menu;
+font-size: 12px;
+/*
+it is very important, if line-height not setted or setted
+in relative units scroll will be broken in firefox
+*/
+line-height: 16px;
+overflow: hidden;
+}
+
+.ac_loading {
+/*background: white url('indicator.gif') right center no-repeat;*/
+}
+
+.ac_odd {
+background-color: #eee;
+}
+
+.ac_over {
+background-color: #0A246A;
+color: white;
+}
+
+/*
+ * 
+ */
+
+.textareaListe{
+	width:240px;
+}
+
+.dateSubmit{
+	display:inline-block;
+}
+
+.clickRow{
+	cursor:pointer;
+}
+
+.clickRowHover{
+	cursor:pointer;
+	color: white;
+	background-color:#2BC8FF;
+}
+
+.submitedRow{
+	background-color:#33FF00;
+}
+
+
+.unsubmitedRow{
+	background-color:#FF3300;
+}
+
+.alignCenter{
+	text-align:center;
+}
+
+.clearCenter{
+	text-align:center;
+}
+
+.notification{
+	display:inline-block;
+	margin:10px;
+	padding:10px;
+}
+
+form.inscrire {
+background: #8398bc;
+border-radius: 5px;
+padding: 20px;
+width: 500px;
+margin: 0 auto 0 auto;
+
+}
+
+form.inscrire fieldset {
+border: none;
+margin-bottom: 10px;
+}
+
+form.inscrire fieldset:last-of-type {
+margin-bottom: 0;
+}
+
+form.inscrire legend {
+color: #2d3543;
+font-size: 16px;
+font-weight: bold;
+padding-bottom: 10px;
+text-shadow: 0px 1px 1px #a4add5;
+}
+
+form.inscrire fieldset fieldset legend {
+color: #111111;
+font-size: 13px;
+font-weight: normal;
+padding-bottom: 0;
+}
+
+form.inscrire ol li {
+background: #b9cf6a;
+background: rgba(255,255,255,.3);
+border-color: #e3ebc3;
+border-color: rgba(255,255,255,.6);
+border-style: solid;
+border-width: 2px;
+border-radius: 5px;
+line-height: 30px;
+list-style: none;
+padding: 5px 10px;
+margin-bottom: 2px;
+width: 480px;
+}
+
+form.inscrire ol ol li {
+background: none;
+border: none;
+float: left;
+}
+
+form.inscrire label {
+float: left;
+font-size: 13px;
+width: 200px;
+}
+
+form.inscrire fieldset fieldset label {
+background:none no-repeat left 50%;
+line-height: 20px;
+padding: 0 0 0 30px;
+width: auto;
+}
+
+form.inscrire fieldset fieldset label:hover {
+cursor: pointer;
+}
+
+form.inscrire input:not([type=submit]):focus,
+form.inscrire textarea:focus {
+background: #eaeaea;
+}
+
+form.inscrire button {
+background: #2f2e43;
+border: none;
+border-radius: 20px;
+color: #ffffff;
+display: block;
+font: 18px Georgia, "Times New Roman", Times, serif;
+letter-spacing: 1px;
+margin: 0 auto;
+padding: 7px 25px;
+text-shadow: 0 1px 1px #000000;
+text-transform: uppercase;
+}
+
+form.inscrire button:hover {
+background: #1d1b25;
+cursor: pointer;
+}
+
+form.inscrire input:not([type=radio]),
+form.inscrire textarea {
+
+background: #ffffff;
+border: none;
+border-radius: 3px;
+font-size: 13px;
+outline: none;
+padding: 5px;
+width: 200px;
+}
