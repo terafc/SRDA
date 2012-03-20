@@ -1,4 +1,20 @@
 <?php
+	//Permet de vérifier si un étudiant existe
+	function isExistEtd($num,$email){
+		$bdd = connexionBase();
+		$req = "SELECT num_etd FROM etudiant WHERE num_etd = :num OR email_etd = :email";
+		$result = $bdd->prepare($req);
+		$result->bindParam(':num', $num);
+		$result->bindParam(':email', $email);
+		$result->execute();
+		$count=0;
+		foreach($result as $value){
+			$count++;
+		}
+		$count = $count != 0 ? true : false;
+		return $count;
+	}
+	
 	//Permet de vérifier si un enseignant existe
 	function isExistEns($num,$email){
 		$bdd = connexionBase();
@@ -17,7 +33,7 @@
 	//Permet d'ajouter un enseignant
 	function createEns($num,$nom,$prenom,$email,$pass){
 		$pass = md5($pass);
-		if(isExistEns($num,$email)){//Si l'id ou l'email existe d�j�
+		if(isExistEns($num,$email) || isExistEtd($num,$email)){//Si l'id ou l'email existe d�j�
 			return false;//Erreur
 		}
 		$bdd = connexionBase();
