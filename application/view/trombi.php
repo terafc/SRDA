@@ -1,4 +1,5 @@
 <?php if(!empty($liste)){ ?>
+<div id="articles">
 	<div class="tableDiv articles">
 		<h4>Vos collègues</h4>
 		<table class="tableExemple">
@@ -24,6 +25,7 @@
 			<?php }?>
 		</table>
 	</div>
+</div>
 <?php }else{?>
 	<div><i>Filière inexistante...</i></div>
 <?php }?>
