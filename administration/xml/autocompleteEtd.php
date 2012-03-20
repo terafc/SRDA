@@ -25,12 +25,12 @@
 	//Ajout des alias
 	if($countA != 0){
 		foreach ($alias as $value) {
-			echo "<element>".$value[0]." [".$value[0]."]</element>";
+			echo "<element>".strtoupper($value[0])." [".strtoupper($value[0])."]</element>";
 			if(!empty($value[1])){
-				echo "<element>".$value[0]."-".$value[1]." [".$value[0]."-".$value[1]."]</element>";
+				echo "<element>".strtoupper($value[0])."-".strtoupper($value[1])." [".strtoupper($value[0])."-".strtoupper($value[1])."]</element>";
 			}
 			if(!empty($value[2])){
-				echo "<element>".$value[0]."-".$value[2]." [".$value[0]."-".$value[2]."]</element>";
+				echo "<element>".strtoupper($value[0])."-".strtoupper($value[2])." [".strtoupper($value[0])."-".strtoupper($value[2])."]</element>";
 			}
 		}
 	}
