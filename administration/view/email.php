@@ -5,7 +5,7 @@
 <br/>
 <div class="formContainer">
 	<div id="deleteEmailDate">
-		<form action="<?php echo HTTP_INDEX;?>?page=email&action=deleteEmail" method="post">
+		<form action="<?php echo HTTP_INDEX;?>?page=email&action=deleteEmail" method="post" enctype="multipart/form-data">
 			<div>
 				<div class="inlineBlockMiddle formTd1">Supprimer tout les Emails dont la date d'envoi est antérieur à :</div>
 				<div class="inlineBlockMiddle formTd2">
@@ -96,7 +96,7 @@
 				</div>
 			</div>
 			<div class="formRow">
-				<div class="inlineBlockMiddle formTd2">Pièce jointe :</div>
+				<div class="inlineBlockMiddle formTd2">Pièce jointe : (<20mo)</div>
 	   			<div class="inlineBlockMiddle formTd1">
 	   				<input type="hidden" name="MAX_FILE_SIZE" value="20971520" />
 	    			<input type="file" class="inlineBlockMiddle" name="fichier" id="fichier" />

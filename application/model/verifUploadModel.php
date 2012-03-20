@@ -96,6 +96,37 @@
 		if(!create_dir(CHEMIN_FILE."/".$creator."/".$id_subject)){
 			return 0;//Erreur
 		}
+		//Si il y a un fichier de sujet uploader
+		$file = isset($_FILES) ? $_FILES : FALSE;
+		if($file != FALSE){
+			$maxsize = 20971520;//20Mo
+			if($file['mon_fichier']['error'] > 0){
+				return 0;//Erreur
+			}
+			elseif($file['mon_fichier']['size'] > $maxsize){
+				return 0;//Erreur
+			}
+			else{
+				//On récupère les infos du fichier
+				$infoPath = pathinfo(($file['mon_fichier']['name']));//pathinfo retourne les infos sur le chemin passer en argument, par ex : l'extension.
+				$extension = strtolower (".".$infoPath['extension']);//L'extension du fichier. Ex : .rar
+				$name = $infoPath['filename'];//Nom du fichier
+				$type = $file['mon_fichier']['type'];//Le type du fichier. Par exemple, cela peut être « image/png ».
+				$size = $file['mon_fichier']['size'];//La taille du fichier en octets
+				$tmp_name = $file['mon_fichier']['tmp_name'];//L'adresse vers le fichier uploadé dans le répertoire temporaire.
+			}
+			//Création du dossier contenant le fichier sujet si existe
+			if(!create_dir(CHEMIN_FILE."/".$creator."/".$id_subject."/sujet")){
+				return 0;//Erreur
+			}
+			//On déplace le fichier
+			if(!move_uploaded_file($file['mon_fichier']['tmp_name'], CHEMIN_FILE."/".$creator."/".$id_subject."/sujet/".$name.$extension)){
+				return 0;//Erreur
+			}
+		}
+		else{
+			$file['mon_fichier']="";
+		}
 	    //Insertion SQL du sujet
 		$req = "INSERT INTO sujet ";
 		$req .= "VALUES (:id_subject,:title,:creator,:format,:syntaxe,:deadline,:datePost,:description,:finalListeId)";
@@ -130,7 +161,7 @@
 				$sujet = "Notification : Nouveau Sujet de Rendu reçue.";
 				$message['text']="Nouveau Sujet de Rendu (".$title.") crée par ".$login['nom']." ".$login['prenom'];
 				$message['html']="<html><body><p>Nouveau Sujet de Rendu (<strong>".$title."</strong>) crée par <strong>".$login['nom']." ".$login['prenom']."</strong></p></body></html>";
-				//sendEmail(getEmail($value),$sujet,$message,"");//Création email
+				//sendEmail(getEmail($value),$sujet,$message,$file['mon_fichier']);//Création email
 				$logEmail = logEmail($value,$sujet,$message['text'],$datePost);//Log des emails
 			}
 			/*
@@ -213,12 +244,6 @@
 			$type = $file['mon_fichier']['type'];//Le type du fichier. Par exemple, cela peut être « image/png ».
 			$size = $file['mon_fichier']['size'];//La taille du fichier en octets
 			$tmp_name = $file['mon_fichier']['tmp_name'];//L'adresse vers le fichier uploadé dans le répertoire temporaire.
-            /*
-			$finfo = finfo_open(FILEINFO_MIME_TYPE);
-            $mimetype = finfo_file($finfo, $file['mon_fichier']['tmp_name']);
-			echo $mimetype;
-            finfo_close($finfo);
-			 */
 			
 			//On vérifie que le type du fichier est correcte.
 			if(!in_array($extension, $formatS)){
@@ -257,7 +282,7 @@
 						$sujet = "Notification : Rendu reçu.";
 						$message['text']="Rendu de ".$login['nom']." ".$login['prenom']." reçu pour le sujet ".$infoCurrSubject['titre'].".";
 						$message['html']="<html><body><p>Rendu de <strong>".$login['nom']." ".$login['prenom']."</strong> reçu pour le sujet <strong>".$infoCurrSubject['titre']."</strong>.</p></body></html>";
-						//sendEmail($login['email'],$sujet,$message,"");//Création email
+						//sendEmail($login['email'],$sujet,$message,$file['mon_fichier']);//Création email
 						$logEmail = logEmail($login['id'],$sujet,$message['text'],$datePost);//Log des emails
 						
 						return 1;//Succès !

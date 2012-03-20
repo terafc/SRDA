@@ -95,6 +95,13 @@
 							<td><label for="destinataire"><strong>Destinataire :</strong></label></td>
 							<td><label for="destinataire"><textarea name="destinataire" id="destinataire" required="required" placeholder="Entrer un nom suivi d'un prénom ou une promotion..."></textarea></label></td>
 						</li>
+						<li>
+							<td><label for="mon_fichier"><strong>Fichier :</strong></label></td>
+							<td><label for="mon_fichier">
+				   				<input type="hidden" name="MAX_FILE_SIZE" value="20971520" />
+				    			<input type="file" name="mon_fichier"/>
+							</label></td>
+						</li>
 			</fieldset>
 			<fieldset>
 				<input name="what" type="hidden" required="required" value="createSubject"/>

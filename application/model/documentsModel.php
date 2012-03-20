@@ -27,7 +27,7 @@
 		//On définit la date actuel, pour ne récupérer que les sujets encore ne cours.
 		$datePost = date("Y-m-d H:i:s");
 		$id = $login['id'];
-		$idLike = "%".$id."%";
+		$idLike = "%||".$id."||%";
 		$req_suj = "SELECT * FROM sujet ";
 		$req_suj .= "WHERE destinataire LIKE :id ";
 		$req_suj .= "AND deadline > :datePost";
