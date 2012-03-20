@@ -51,7 +51,7 @@
 				<div class="formRow">
 					<div class="inlineBlockTop formTd1">Supprimer toutes les notifications dont le(s) destinataire(s) sont:</div>
 					<div class="inlineBlockTop formTd2">
-						<textarea id="autoAll" class="inlineBlockTop" name="listeId" required="required" placeholder="Entrer un nom, ou un prénom ..."></textarea>
+						<textarea id="autoAll" class="inlineBlockTop" name="listeId" required="required" placeholder="Entrer un nom suivi d'un prénom ou une promotion..."></textarea>
 					</div>
 				</div>
 				<div class="alignCenter marginTop10">

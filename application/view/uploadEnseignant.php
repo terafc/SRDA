@@ -89,11 +89,11 @@
 					<ol>
 						<li>
 							<td><label for="description"><strong>Description :</strong></label></td>
-							<td><label for="description"><textarea class="textareaListe" name="description" required="required"></textarea></label></td>
+							<td><label for="description"><textarea class="textareaListe" name="description" required="required" placeholder="Entrer une description du sujet"></textarea></label></td>
 						</li>
 						<li>
 							<td><label for="destinataire"><strong>Destinataire :</strong></label></td>
-							<td><label for="destinataire"><textarea name="destinataire" id="destinataire" required="required"></textarea></label></td>
+							<td><label for="destinataire"><textarea name="destinataire" id="destinataire" required="required" placeholder="Entrer un nom suivi d'un prénom ou une promotion..."></textarea></label></td>
 						</li>
 			</fieldset>
 			<fieldset>

@@ -62,7 +62,7 @@
 			<div class="formRow">
 				<div class="inlineBlockTop formTd1">Afficher tout les Logs de :</div>
 				<div class="inlineBlockTop formTd2">
-					<textarea class="autoAll" class="inlineBlockTop" name="listeId" required="required" placeholder="Entrer un nom, ou un prénom ..."></textarea>
+					<textarea class="autoAll" class="inlineBlockTop" name="listeId" required="required" placeholder="Entrer un nom suivi d'un prénom ou une promotion..."></textarea>
 				</div>
 			</div>
 			<div class="alignCenter marginTop10">
@@ -80,7 +80,7 @@
 			<div class="formRow">
 				<div class="inlineBlockTop formTd2">Destinataire :</div>
 				<div class="inlineBlockTop formTd1">
-					<textarea class="autoAll" class="inlineBlockTop" name="listeId" required="required" placeholder="Entrer un nom, ou un prénom ..."></textarea>
+					<textarea class="autoAll" class="inlineBlockTop" name="listeId" required="required" placeholder="Entrer un nom suivi d'un prénom ou une promotion..."></textarea>
 				</div>
 			</div>
 			<div class="formRow">

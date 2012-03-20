@@ -4,7 +4,6 @@
 	require_once("../global/connexion.inc.php");
 	//Connection à la BDD
 	$bdd = connexionBase();
-	$list = array();
 
 	//Requetes pour enseignant et etudiant
 	$req = "select num_ens, nom_ens, prenom_ens ";
