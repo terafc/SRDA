@@ -19,7 +19,7 @@
 						include_once(CHEMIN_VIEW."/documentsEtudiant.php");
 						break;
 					default:
-						include_once(CHEMIN_VIEW."/404NotFound.php");
+						include_once(CHEMIN_VIEW."/404.php");
 						break;
 				}
 				break;
@@ -35,7 +35,7 @@
 						include_once(CHEMIN_VIEW."/uploadEnseignant.php");
 						break;
 					default:
-						include_once(CHEMIN_VIEW."/404NotFound.php");
+						include_once(CHEMIN_VIEW."/404.php");
 						break;
 				}
 				break;
@@ -48,7 +48,7 @@
 			case "deleteSubject":
 				//Vérification que la page a été appeler depuis deletePage.php
 				if(!isset($_POST['id_creator']) || !isset($_POST['id_subject'])){
-					include_once(CHEMIN_VIEW."/404NotFound.php");
+					include_once(CHEMIN_VIEW."/404.php");
 					break;
 				}
 				require_once("../global/config.inc.php");//Il faut charger les variables GLOBALES car il s'agit d'un appel ajax
@@ -167,7 +167,7 @@
 				include_once(CHEMIN_VIEW."/downloadAllRendu.php");
 				break;
 			default:
-				include_once(CHEMIN_VIEW."/404NotFound.php");
+				include_once(CHEMIN_VIEW."/404.php");
 				break;
 		}
 	}

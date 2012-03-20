@@ -4,7 +4,9 @@ Allow from All
 
 #Redirection des erreurs
 #-----------------------
-ErrorDocument 403 /SRDA/accueil/show
+ErrorDocument 403 /SRDA/error/403
+ErrorDocument 404 /SRDA/error/404
+ErrorDocument 500 /SRDA/error/500
 
 # Réecriture d'URL
 #------------------

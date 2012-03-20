@@ -18,7 +18,7 @@
 			include_once(CHEMIN_VIEW."/trombi.php");
 			break;
 		default:
-			include_once(CHEMIN_VIEW."/404NotFound.php");
+			include_once(CHEMIN_VIEW."/404.php");
 			break;
 	}
 ?>
