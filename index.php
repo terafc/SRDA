@@ -51,7 +51,7 @@
 					}
 					//Sinon si l'utilisateur est logé on indique une erreur 404
 					elseif(isset($_SESSION['login'])){
-						include_once(CHEMIN_VIEW.'/404NotFound.php');
+						header("Location:index.php?page=accueil&action=show");
 					}
 					//Sinon on le redirige vers la page de login
 					else{
