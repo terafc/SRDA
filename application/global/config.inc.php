@@ -5,10 +5,10 @@ define('SQL_DSN', 'mysql:dbname=SRDA;host=localhost');
 define('SQL_USERNAME', 'root');
 define('SQL_PASSWORD', '');
 //Définit une liste de chemins(Chemin sur le serveur)
-define('CHEMIN_GLOBAL', $_SERVER['DOCUMENT_ROOT'].'/SRDA/application/global');
-define('CHEMIN_VIEW',$_SERVER['DOCUMENT_ROOT'].'/SRDA/application/view');
-define('CHEMIN_MODEL',$_SERVER['DOCUMENT_ROOT'].'/SRDA/application/model');
-define('CHEMIN_CONTROLLER',$_SERVER['DOCUMENT_ROOT'].'/SRDA/application/controller');
+define('CHEMIN_GLOBAL', $_SERVER['DOCUMENT_ROOT'].'SRDA/application/global');
+define('CHEMIN_VIEW',$_SERVER['DOCUMENT_ROOT'].'SRDA/application/view');
+define('CHEMIN_MODEL',$_SERVER['DOCUMENT_ROOT'].'SRDA/application/model');
+define('CHEMIN_CONTROLLER',$_SERVER['DOCUMENT_ROOT'].'SRDA/application/controller');
 define('CHEMIN_LIB_PHP',$_SERVER['DOCUMENT_ROOT'].'SRDA/application/lib_php');
 define('CHEMIN_FILE',$_SERVER['DOCUMENT_ROOT'].'SRDA/application/file');
 //Définit une liste de lien HTTP

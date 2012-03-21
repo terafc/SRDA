@@ -5,7 +5,7 @@
 <br/>
 <div class="formContainer">
 	<div id="deleteEmailDate">
-		<form action="<?php echo HTTP_INDEX;?>?page=email&action=deleteEmail" method="post">
+		<form action="<?php echo HTTP_INDEX;?>?page=email&action=deleteEmail" method="post" enctype="multipart/form-data">
 			<div>
 				<div class="inlineBlockMiddle formTd1">Supprimer tout les Emails dont la date d'envoi est antérieur à :</div>
 				<div class="inlineBlockMiddle formTd2">
@@ -62,7 +62,7 @@
 			<div class="formRow">
 				<div class="inlineBlockTop formTd1">Afficher tout les Logs de :</div>
 				<div class="inlineBlockTop formTd2">
-					<textarea class="autoAll" class="inlineBlockTop" name="listeId" required="required" placeholder="Entrer un nom, ou un prénom ..."></textarea>
+					<textarea class="autoAll" class="inlineBlockTop" name="listeId" required="required" placeholder="Entrer un nom suivi d'un prénom ou une promotion..."></textarea>
 				</div>
 			</div>
 			<div class="alignCenter marginTop10">
@@ -80,7 +80,7 @@
 			<div class="formRow">
 				<div class="inlineBlockTop formTd2">Destinataire :</div>
 				<div class="inlineBlockTop formTd1">
-					<textarea class="autoAll" class="inlineBlockTop" name="listeId" required="required" placeholder="Entrer un nom, ou un prénom ..."></textarea>
+					<textarea class="autoAll" class="inlineBlockTop" name="listeId" required="required" placeholder="Entrer un nom suivi d'un prénom ou une promotion..."></textarea>
 				</div>
 			</div>
 			<div class="formRow">
@@ -96,7 +96,7 @@
 				</div>
 			</div>
 			<div class="formRow">
-				<div class="inlineBlockMiddle formTd2">Pièce jointe :</div>
+				<div class="inlineBlockMiddle formTd2">Pièce jointe : (<20mo)</div>
 	   			<div class="inlineBlockMiddle formTd1">
 	   				<input type="hidden" name="MAX_FILE_SIZE" value="20971520" />
 	    			<input type="file" class="inlineBlockMiddle" name="fichier" id="fichier" />

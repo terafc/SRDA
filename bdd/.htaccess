@@ -1,7 +1,17 @@
-#AuthUserFile C:\wamp\www\SRDA\.htpasswd
-#AuthGroupFile /dev/null
-#DirectoryIndex index.php
+#Autorisation d'access
+#-----------------------
 Options -Indexes
-
 Deny from All
+
+#Redirection des erreurs
+#-----------------------
+ErrorDocument 403 /SRDA/error/403
+ErrorDocument 404 /SRDA/error/404
+ErrorDocument 500 /SRDA/error/500
+
+# Réecriture d'URL
+#------------------
+Options FollowSymLinks
+RewriteEngine on
+RewriteRule ^([a-z]+)/([a-zA-Z0-9]+)$ index.php?page=$1&action=$2 [L]
 

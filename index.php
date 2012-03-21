@@ -49,9 +49,17 @@
 						$action = $_REQUEST['action'];
 						include_once(CHEMIN_CONTROLLER.'/'.$_REQUEST['page'].'Controller.php');
 					}
+					//Sinon si l'utilisateur est logé et qu'il y a aucune variable en paramètre
+					elseif(isset($_SESSION['login']) && empty($_REQUEST['page']) && empty($_REQUEST['action'])){
+						include_once(CHEMIN_CONTROLLER.'/accueilController.php');
+					}
 					//Sinon si l'utilisateur est logé on indique une erreur 404
 					elseif(isset($_SESSION['login'])){
+<<<<<<< HEAD
 						header("Location:index.php?page=accueil&action=show");
+=======
+						include_once(CHEMIN_VIEW.'/404.php');
+>>>>>>> fdbf2f71f2d7f28b9592efe37d01aa4273e04c87
 					}
 					//Sinon on le redirige vers la page de login
 					else{

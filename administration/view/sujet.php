@@ -51,7 +51,7 @@
 				<div class="formRow">
 					<div class="inlineBlockTop formTd1">Supprimer tout les sujets dont le(s) créateur(s) sont :</div>
 					<div class="inlineBlockTop formTd2">
-						<textarea id="autoEns" class="inlineBlockTop" name="listeId" required="required" placeholder="Entrer l'id, le nom, ou le prénom d'un professeur..."></textarea>
+						<textarea id="autoEns" class="inlineBlockTop" name="listeId" required="required" placeholder="Entrer un nom suivi d'un prénom ou une promotion..."></textarea>
 					</div>
 				</div>
 				<div class="alignCenter marginTop10">

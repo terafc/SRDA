@@ -40,7 +40,7 @@
 			<ol>
 				<li>
 					<td><label for="listeId" class="inlineBlockTop"><strong>Liste d'enseignants :</strong></label></td> 
-					<td><textarea id="autoEns" class="inlineBlockTop" placeholder="Entrer un id, un nom, ou un prénom..." name="listeId" required="required"></textarea></td>
+					<td><textarea id="autoEns" class="inlineBlockTop" placeholder="Entrer un nom suivi d'un prénom ou une promotion..." name="listeId" required="required"></textarea></td>
 				</li>
 			</ol>	
 		</fieldset>
