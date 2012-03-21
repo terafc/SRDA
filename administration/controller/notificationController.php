@@ -11,7 +11,7 @@
 			$count += deleteNotif($date); //Suppression dans la table notification
 			//Redirection
 			$message = "Suppression réussie ! ".$count." lignes affectées ! Redirection...";
-			$url = HTTP_INDEX."?page=notification&action=show";
+			$url = HTTP_URL."/notification/show";
 			$time = 2000;
 			$html = "<div class='alignCenter bold'>".$message."</div>";
 			$html .= "<script>window.setTimeout(\"location=('".$url."');\",".$time.");</script>";
@@ -37,7 +37,7 @@
 			$count += deleteNotifFrom($listeId);//Suppression dans notification
 			//Redirection
 			$message = "Suppression réussie ! ".$count." lignes affectées ! Redirection...";
-			$url = HTTP_INDEX."?page=notification&action=show";
+			$url = HTTP_URL."/notification/show";
 			$time = 2000;
 			$html = "<div class='alignCenter bold'>".$message."</div>";
 			$html .= "<script>window.setTimeout(\"location=('".$url."');\",".$time.");</script>";

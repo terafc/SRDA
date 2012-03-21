@@ -6,7 +6,7 @@
 			$count += resetApp(); //Permet de vider les tables : notification,sujet,upload,log_email et le dossier /file sur le serveur.
 			//Redirection
 			$message = "Suppression réussie ! ".$count." lignes affectées ! Redirection...";
-			$url = HTTP_INDEX."?page=accueil&action=show";
+			$url = HTTP_URL."/accueil/show";
 			$time = 2000;
 			$html = "<div class='alignCenter bold'>".$message."</div>";
 			$html .= "<script>window.setTimeout(\"location=('".$url."');\",".$time.");</script>";

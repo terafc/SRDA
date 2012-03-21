@@ -18,7 +18,7 @@
 				$message = "ID ou Email déjà utilisé ! Redirection...";
 			}
 			//Redirection
-			$url = HTTP_INDEX."?page=enseignant&action=show";
+			$url = HTTP_URL."/enseignant/show";
 			$time = 2000;
 			$html = "<div style='display:inline-block;'>".$message."</div>";
 			$html .= "<script>window.setTimeout(\"location=('".$url."');\",".$time.");</script>";
@@ -52,7 +52,7 @@
 				$count += deleteEmailFromDest($listeId);//Suppression dans log_email
 			}
 			//Redirection
-			$url = HTTP_INDEX."?page=enseignant&action=show";
+			$url = HTTP_URL."/enseignant/show";
 			$time = 2000;
 			$message = "Suppression réussie ! ".$count." lignes affectées ! Redirection...";
 			$html = "<div class='inlineBlock alignCenter'>".$message."</div>";

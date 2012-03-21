@@ -3,7 +3,7 @@
 <br/>
 <div class="formContainer">
 	<div id="notifDeadline">
-		<form action="<?php echo HTTP_INDEX;?>?page=notification&action=deleteNotif" method="post">
+		<form action="<?php echo HTTP_URL;?>/notification/deleteNotif" method="post">
 				<div class="formRow">
 					<div class="inlineBlockMiddle formTd1">Supprimer toutes les notifications dont la deadline est antérieur à :</div>
 					<div class="inlineBlockMiddle formTd2">
@@ -47,7 +47,7 @@
 <br/>
 <div class="formContainer">
 	<div id="notifDest">
-		<form action="<?php echo HTTP_INDEX;?>?page=notification&action=deleteNotifFrom" method="post">
+		<form action="<?php echo HTTP_URL;?>/notification/deleteNotifFrom" method="post">
 				<div class="formRow">
 					<div class="inlineBlockTop formTd1">Supprimer toutes les notifications dont le(s) destinataire(s) sont:</div>
 					<div class="inlineBlockTop formTd2">

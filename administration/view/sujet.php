@@ -3,7 +3,7 @@
 <br/>
 <div class="formContainer">
 	<div id="sujetDeadline">
-		<form action="<?php echo HTTP_INDEX;?>?page=sujet&action=deleteSubject" method="post">
+		<form action="<?php echo HTTP_URL;?>/sujet/deleteSubject" method="post">
 			<div class="formRow">
 				<div class="inlineBlockMiddle formTd1">Supprimer tout les sujets dont la deadline est antérieur à :</div>
 				<div class="inlineBlockMiddle formTd2">
@@ -47,7 +47,7 @@
 <br/>
 <div class="formContainer">
 	<div id="sujetCreateur">
-		<form action="<?php echo HTTP_INDEX;?>?page=sujet&action=deleteSubjectFrom" method="post">
+		<form action="<?php echo HTTP_URL;?>/sujet/deleteSubjectFrom" method="post">
 				<div class="formRow">
 					<div class="inlineBlockTop formTd1">Supprimer tout les sujets dont le(s) créateur(s) sont :</div>
 					<div class="inlineBlockTop formTd2">
