@@ -24,7 +24,7 @@
 	<div id="connexion">
 		<input type="text" name="search" class="search" placeholder="Recherche" onKeyPress="if(event.keyCode==13){getListe($(this).val());}">
 	</div>
-	<img src="<?php echo HTTP_IMG;?>/SRDA_Final.png" height=60 style="padding-left:3px;"/> <br/>
+	<a href="<?php echo HTTP_INDEX;?>"><img src="<?php echo HTTP_IMG;?>/SRDA_Final.png" height=60 style="padding-left:3px;"/></a> <br/>
 	<h3>
 		Service de rangement de documents automatisé 
 		<?php if (isset($_SESSION['login'])){
