@@ -4,7 +4,7 @@
 function getListe($promo) {
 	$bdd = connexionBase();
 	$promo = strtoupper($promo);
-	$listePromo = array('RT1', 'RT2', 'LP RT');
+	$listePromo = array('RT1', 'RT2', 'LP');
 	$result = array();
 	$i = 0;
 	//Si il s'agit des enseignants

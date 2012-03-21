@@ -15,7 +15,7 @@
 		&& ((!isset($_REQUEST['page']) || $_REQUEST['page']!='login')// { ET ($page n'existe pas OU différent de 'login')
 			|| (!isset($_REQUEST['action']) || !in_array($_REQUEST['action'], $testAction)))//OU ($action n'existe pas OU différent des actions possibles) } 
 		){
-		header("Location: ".HTTP_INDEX."?page=login&action=show");//Alors on le redirige vers la page de login
+		header("Location: ".HTTP_URL."/login/show");//Alors on le redirige vers la page de login
 	}
 ?>
 <!DOCTYPE html>
@@ -55,7 +55,7 @@
 					}
 					//Sinon si l'utilisateur est logé on indique une erreur 404
 					elseif(isset($_SESSION['login'])){
-						header("Location:index.php?page=accueil&action=show");
+						header("Location: ".HTTP_URL."/accueil/show");
 						include_once(CHEMIN_VIEW.'/404.php');
 					}
 					//Sinon on le redirige vers la page de login
