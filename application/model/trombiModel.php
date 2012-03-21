@@ -49,7 +49,7 @@ function getListe($promo) {
 function getTrombi($path, $nom) {
 	$url = '';
 	if (is_file($path)) {
-		$url = '<a href="javascript:void(0);"
+		$url = '<a class="photo_trombi" href="javascript:void(0);"
 				onMouseOver="return overlib(\'\',
 				WIDTH, 84, HEIGHT, 113,LEFT,OFFSETX,30,OFFSETY,-50,BORDER,\'2\',
 				BGCOLOR,\'#2F8CAE\',
@@ -59,7 +59,7 @@ function getTrombi($path, $nom) {
 	}
 	else {
 		$path = 'application/img/trombi/profil.png';
-		$url = '<a href="javascript:void(0);"
+		$url = '<a class="photo_trombi" href="javascript:void(0);"
 				onMouseOver="return overlib(\'\',
 				WIDTH, 84, HEIGHT, 113,LEFT,OFFSETX,30,OFFSETY,-50,BORDER,\'2\',
 				BGCOLOR,\'#2F8CAE\',

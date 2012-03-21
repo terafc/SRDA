@@ -251,9 +251,9 @@ background-color:#A7C942;
 color:#ffffff;
 }
 
-.tableExemple tr.alt td {
+.tableExemple tr td {
 color:#000000;
-background-color:#EAF2D3;
+background-color:#eee;
 }
 
 .tableExemple tr.bis td {
@@ -684,4 +684,11 @@ font-size: 13px;
 outline: none;
 padding: 5px;
 width: 200px;
+}
+
+a.photo_trombi
+{
+text-decoration: none;
+font-weight: bold;
+color:black;
 }
