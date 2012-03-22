@@ -2,6 +2,8 @@
 	//Permet de creer un dossier avec les droits
 	function create_dir($path){
 		if (!mkdir($path, 0777, true)) {
+			echo '6';
+			exit;
 			return 0;//Erreur
 		}else{
 			return 1;//Succès
@@ -94,16 +96,22 @@
 		$finalListeId = '||'.implode('||',$listeId).'||';
 		//On vérifie si l'enseignant possède déjà un dossier, sinon on en crée un.
 		if(!create_dir(CHEMIN_FILE."/".$creator."/".$id_subject)){
+			echo "1";
+			exit;
 			return 0;//Erreur
 		}
 		//Si il y a un fichier de sujet uploader
 		$file = isset($_FILES) ? $_FILES : FALSE;
-		if($file != FALSE){
+		if($file != FALSE && $file['mon_fichier']['error'] != 4){
 			$maxsize = 20971520;//20Mo
 			if($file['mon_fichier']['error'] > 0){
+				echo '2';
+				exit;
 				return 0;//Erreur
 			}
 			elseif($file['mon_fichier']['size'] > $maxsize){
+				echo '3';
+				exit;	
 				return 0;//Erreur
 			}
 			else{
@@ -117,10 +125,14 @@
 			}
 			//Création du dossier contenant le fichier sujet si existe
 			if(!create_dir(CHEMIN_FILE."/".$creator."/".$id_subject."/sujet")){
+					echo '4';
+				exit;
 				return 0;//Erreur
 			}
 			//On déplace le fichier
 			if(!move_uploaded_file($file['mon_fichier']['tmp_name'], CHEMIN_FILE."/".$creator."/".$id_subject."/sujet/".$name.$extension)){
+					echo '5';
+				exit;
 				return 0;//Erreur
 			}
 		}
@@ -306,6 +318,8 @@
 		$count = $result->execute();//exécution
 	    //$count contient le nombre de ligne inséré dans la BDD.
 		if($count!=1){
+			echo '7';
+			exit;
 			return 0;//Erreur
 		}
 		else{
@@ -402,6 +416,8 @@
 		$count = $result->execute();//exécution
 	    //$count contient le nombre de ligne inséré dans la BDD.
 		if($count!=1){
+			echo '7';
+			exit;
 			return 0;//Erreur
 		}
 		else{

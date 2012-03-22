@@ -59,11 +59,11 @@
 				$mess['text'] = "Une demande de réinitialisation du mot de passe a été effectuée. ";
 				$mess['text'] .= "Si cette requête ne vient pas de vous, veuillez ne pas tenir compte de cette email. ";
 				$mess['text'] .= "Sinon veuillez cliquer sur le lien suivant pour réinitialiser votre mot de passe à 1234 : --->";
-				$mess['text'] .= HTTP_URL."/login/remindMdp&idUser=".$_REQUEST['idUser']."&idReset=".uniqid(null,TRUE)."<---";
+				$mess['text'] .= HTTP_INDEX."?page=login&action=remindMdp&idUser=".$_REQUEST['idUser']."&idReset=".uniqid(null,TRUE)."<---";
 				$mess['html'] = "<html><body><p>Une demande de réinitialisation du mot de passe a été effectuée. </p>";
 				$mess['html'] .= "<p>Si cette requête ne vient pas de vous, veuillez ne pas tenir compte de cette email. </p>";
 				$mess['html'] .= "<p>Sinon veuillez cliquer sur le lien suivant pour réinitialiser votre mot de passe à <strong>1234</strong>: </p><br/>--->";
-				$mess['html'] .= "<a href='".HTTP_URL."/login/remindMdp&idUser=".$_REQUEST['idUser']."&idReset=".uniqid(null,TRUE)."'>Reset Password.</a><---</body></html>";
+				$mess['html'] .= "<a href='".HTTP_INDEX."?page=login&action=remindMdp&idUser=".$_REQUEST['idUser']."&idReset=".uniqid(null,TRUE)."'>Reset Password.</a><---</body></html>";
 				/* Ligne a Décommenter lors du transfert sur le serveur 
 				if(sendEmail($mail,$sujet,$mess,"")){*/
 					$datePost = date("Y-m-d H:i:s");
