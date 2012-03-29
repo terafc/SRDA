@@ -12,6 +12,7 @@ ErrorDocument 500 /SRDA/error/500
 #------------------
 Options FollowSymLinks
 RewriteEngine on
+RewriteCond %{HTTP_HOST} !^/application/*$ [NC]
 RewriteRule ^([a-z]+)/([a-zA-Z0-9]+)$ index.php?page=$1&action=$2 [L]
 
 #Pour ne pas faire apparaitre /show dans le lien

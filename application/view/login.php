@@ -5,7 +5,7 @@
 	else{?>
 		<div id="articles">
 		<center><h4>Tout d'abord, veuillez vous connecter.</h4></center>
-		<form action="<?php echo HTTP_INDEX;?>?page=login&action=login" method="post" class="inscrire">
+		<form action="<?php echo HTTP_URL;?>/login/login" method="post" class="inscrire">
 			<fieldset class="identification">
 				<legend>Identification</legend>
 				<ol>
@@ -32,7 +32,7 @@
 			</fieldset>
 		</form>
 		<br/>
-		<form action="<?php echo HTTP_INDEX;?>?page=login&action=remindMdp" method="post" class="inscrire">
+		<form action="<?php echo HTTP_URL;?>/login/remindMdp" method="post" class="inscrire">
 			<fieldset class="identification">
 				<legend>Mot de passe oublié ?</legend>
 				<ol>
