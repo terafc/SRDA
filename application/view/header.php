@@ -35,10 +35,10 @@
 	<hr>
 </div>
 <ul id="nav-one" class="dropmenu">
-	<li><a href="<?php echo HTTP_URL;?>/accueil/show" class="lien1">Accueil</a></li>
+	<li><a href="<?php echo HTTP_URL;?>/accueil" class="lien1">Accueil</a></li>
 	<li><a href="javascript:void(0);" class="lien3">Documents</a>
 		<ul> 
-			<li><a href="<?php echo HTTP_URL;?>/documents/documents"><?php echo $doc;?></a></li> 
+			<li><a href="<?php echo HTTP_URL;?>/documents"><?php echo $doc;?></a></li> 
 			<?php if(isset($upl)){ ?>
 				<li><a href="<?php echo HTTP_URL;?>/documents/upload"><?php echo $upl;?></a></li> 
 			<?php } ?>
@@ -55,5 +55,5 @@
 			<li><a href="<?php echo HTTP_URL;?>/trombi/Enseignant">Enseignant</a></li>
 		</ul>
 	</li>
-	<li><a href="<?php echo HTTP_URL;?>/compte/show" class="lien2">Compte</a></li>
+	<li><a href="<?php echo HTTP_URL;?>/compte" class="lien2">Compte</a></li>
 </ul>

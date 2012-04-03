@@ -19,6 +19,7 @@
 						Espace Administrateur
 					</h3>
 				</div>
+				<a href="http://fakeuser:fakepass@localhost/srda/administration/logout/">Déconnexion</a>
 				<div class="lol">
 					<img src="<?php echo HTTP_IMG;?>/admin.gif"/>
 				</div>

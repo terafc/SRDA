@@ -5,10 +5,6 @@ AuthType Basic
 AuthUserFile "C:\wamp\www\SRDA\administration\.htpasswd"
 Require valid-user
 
-#Autorisation d'access
-#---------------------
-Options -Indexes
-
 #Redirection des erreurs
 #-----------------------
 ErrorDocument 403 /SRDA/administration/error/403
@@ -20,3 +16,5 @@ ErrorDocument 500 /SRDA/administration/error/500
 Options FollowSymLinks
 RewriteEngine on
 RewriteRule ^(administration)/([a-z]+)/([a-zA-Z0-9]+)$ indexAdministration.php?page=$1&action=$2 [L]
+RewriteRule ^([a-z]+)/([a-zA-Z0-9]+)$ indexAdministration.php?page=$1&action=$2 [L]
+RewriteRule ^([a-zA-Z0-9]+)$ indexAdministration.php?page=accueil&action=show [R=403]
