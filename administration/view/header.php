@@ -4,6 +4,7 @@
 		<title>SRDA</title>
 		<meta charset="UTF-8"/>
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/> 
+		<link rel="icon" type="image/png" href="<?php echo HTTP_IMG;?>/favicon.png" />
 		<link rel="stylesheet" type="text/css" href="<?php echo HTTP_CSS;?>/style.css"/>
 		<script src="<?php echo HTTP_JS;?>/jquery-1.6.2.min.js" type="text/javascript"></script>
 		<script src="<?php echo HTTP_JS;?>/jquery.autocomplete.min.js" type="text/javascript"></script>
