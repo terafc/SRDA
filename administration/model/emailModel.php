@@ -13,12 +13,12 @@
 		//==========
 		 
 		//=====Lecture et mise en forme de la pièce jointe si existe
-		/*if(!empty($fichier)){
-			$fichier   = fopen("rendu.zip", "r");
-			$attachement = fread($fichier, filesize("rendu.zip"));
+		if(!empty($fichier)){
+			$fichierPath   = fopen($fichier['tmp_name'], "r");
+			$attachement = fread($fichierPath, filesize($fichier['tmp_name']));
 			$attachement = chunk_split(base64_encode($attachement));
-			fclose($fichier);
-		}*/
+			fclose($fichierPath);
+		}
 		//==========
 		 
 		//=====Création de la boundary.
@@ -60,24 +60,13 @@
 		$message.= $passage_ligne."--".$boundary.$passage_ligne;
 		 
 		//=====Ajout de la pièce jointe si existe
-		/*if(!empty($fichier)){
-			//===== On récupère les infos du fichier
-			$infoPath = pathinfo(($fichier['name']));//pathinfo retourne les infos sur le chemin passer en argument, par ex : l'extension.
-			$extension = strtolower (".".$infoPath['extension']);//L'extension du fichier. Ex : .rar
-			$type = $fichier['type'];//Le type du fichier. Par exemple, cela peut être « image/png ».
-			$size = $fichier['size'];//La taille du fichier en octets
-			$tmp_name = $fichier['tmp_name'];//L'adresse vers le fichier uploadé dans le répertoire temporaire.
-			//=====
-			//===== Vérification
-			$maxsize=20971520;//20Mo
-			if($size > $maxsize){return false;}//Erreur : fichier trop gros
-			//=====
-			$message.= "Content-Type: ".$type."; name=\"".basename($fichier['name'])."\"".$passage_ligne;
+		if(!empty($fichier)){
+			$message.= "Content-Type: ".$fichier['type']."; name=\"".$fichier['type']."\"".$passage_ligne;
 			$message.= "Content-Transfer-Encoding: base64".$passage_ligne;
-			$message.= "Content-Disposition: attachment; filename=\"".$tmp_name."\"".$passage_ligne;
+			$message.= "Content-Disposition: attachment; filename=\"".$fichier['name']."\"".$passage_ligne;
 			$message.= $passage_ligne.$attachement.$passage_ligne.$passage_ligne;
 			$message.= $passage_ligne."--".$boundary."--".$passage_ligne; 
-		}*/
+		}
 		//========== 
 		//=====Envoi de l'e-mail.
 		if(mail($mail,$sujet,$message,$header)){return true;}
