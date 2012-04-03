@@ -25,7 +25,7 @@
 		<base href="/SRDA/">
 		<meta charset="UTF-8"/>
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
-		<link rel="icon" type="image/png" href="favicon.png" />
+		<link rel="icon" type="image/png" href="<?php echo HTTP_IMG;?>/favicon.png" />
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="<?php echo HTTP_CSS;?>/style.css"/>
 		<link href="<?php echo HTTP_CSS;?>/jquery-ui-1.8.14.custom.css" rel="stylesheet" type="text/css" />

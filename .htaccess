@@ -4,9 +4,9 @@ Options -Indexes
 
 #Redirection des erreurs
 #-----------------------
-ErrorDocument 403 /SRDA/error/403
-ErrorDocument 404 /SRDA/error/404
-ErrorDocument 500 /SRDA/error/500
+ErrorDocument 403 /SRDA/error/403.php
+ErrorDocument 404 /SRDA/error/404.php
+ErrorDocument 500 /SRDA/error/500.php
 
 # Réecriture d'URL
 #------------------
