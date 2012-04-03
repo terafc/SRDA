@@ -3,8 +3,8 @@ function search($key) {
 	$key = "%".$key."%";
 	$bdd = connexionBase();//Connexion BDD
 	//Les Requêtes
-	$req_ens = "SELECT * FROM enseignant WHERE nom_ens LIKE :key OR	prenom_ens LIKE :key";
-	$req_etd = "SELECT * FROM etudiant WHERE nom_etd LIKE :key OR prenom_etd LIKE :key OR promo LIKE :key OR num_etd LIKE :key";
+	$req_ens = "SELECT * FROM enseignant WHERE nom_ens COLLATE utf8_general_ci LIKE :key OR prenom_ens COLLATE utf8_general_ci LIKE :key";
+	$req_etd = "SELECT * FROM etudiant WHERE nom_etd COLLATE utf8_general_ci LIKE :key OR prenom_etd COLLATE utf8_general_ci LIKE :key OR promo COLLATE utf8_general_ci LIKE :key OR num_etd COLLATE utf8_general_ci LIKE :key";
 	//Execution des requêtes ens
 	$result1 = $bdd->prepare($req_ens);
 	$result1->bindParam(':key', $key);
@@ -33,6 +33,7 @@ function search($key) {
 	$resultat = array();
 	$resultat["Enseignant"]=$result_ens;
 	$resultat["Etudiant"]=$result_etd;
+	var_dump($resultat);
 	return $resultat;
 
 }
