@@ -13,12 +13,12 @@
 		//==========
 		 
 		//=====Lecture et mise en forme de la pièce jointe si existe
-		/*if(!empty($fichier)){
-			$fichier   = fopen("rendu.zip", "r");
-			$attachement = fread($fichier, filesize("rendu.zip"));
+		if(!empty($fichier)){
+			$fichierPath   = fopen($fichier['tmp_name'], "r");
+			$attachement = fread($fichierPath, filesize($fichier['tmp_name']));
 			$attachement = chunk_split(base64_encode($attachement));
-			fclose($fichier);
-		}*/
+			fclose($fichierPath);
+		}
 		//==========
 		 
 		//=====Création de la boundary.
@@ -60,13 +60,13 @@
 		$message.= $passage_ligne."--".$boundary.$passage_ligne;
 		 
 		//=====Ajout de la pièce jointe si existe
-		/*if(!empty($fichier)){
-			$message.= "Content-Type: image/jpeg; name=\"image.jpg\"".$passage_ligne;
+		if(!empty($fichier)){
+			$message.= "Content-Type: ".$fichier['type']."; name=\"".$fichier['type']."\"".$passage_ligne;
 			$message.= "Content-Transfer-Encoding: base64".$passage_ligne;
-			$message.= "Content-Disposition: attachment; filename=\"image.jpg\"".$passage_ligne;
+			$message.= "Content-Disposition: attachment; filename=\"".$fichier['name']."\"".$passage_ligne;
 			$message.= $passage_ligne.$attachement.$passage_ligne.$passage_ligne;
 			$message.= $passage_ligne."--".$boundary."--".$passage_ligne; 
-		}*/
+		}
 		//========== 
 		//=====Envoi de l'e-mail.
 		if(mail($mail,$sujet,$message,$header)){return true;}

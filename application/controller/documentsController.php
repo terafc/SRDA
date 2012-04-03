@@ -67,6 +67,7 @@
 				include_once(CHEMIN_VIEW."/uploadForm.php");//Chemin différent puisqu'on y accède depuis un appel ajax
 				break;
 			case "verifUpload": //Appeler lors de l'upload d'un réel d'un fichier de rendu ou d'un sujet
+				require_once(CHEMIN_MODEL."/emailModel.php");
 				include_once(CHEMIN_MODEL."/verifUploadModel.php");
 				$login = $_SESSION['login'];
 				$post = $_POST;
