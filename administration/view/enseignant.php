@@ -1,6 +1,6 @@
 </br>
 <div class="articles">
-	<form class="inscrire" action="<?php echo HTTP_INDEX;?>?page=enseignant&action=create" method="post">
+	<form class="inscrire" action="<?php echo HTTP_URL;?>/enseignant/create" method="post">
 		<fieldset>
 			<legend>Créer un nouvel enseignant</legend>
 			<ol>
@@ -34,7 +34,7 @@
 </div>
 <br/>
 <div class="articles">
-	<form class="inscrire" action="<?php echo HTTP_INDEX;?>?page=enseignant&action=delete" method="post">
+	<form class="inscrire" action="<?php echo HTTP_URL;?>/enseignant/delete" method="post">
 		<fieldset>
 			<legend>Supprimer des enseignants :</legend>
 			<ol>

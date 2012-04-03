@@ -9,15 +9,12 @@
 				foreach ($login as $key => $value) {
 					$_SESSION['login'][$key]=$value;
 				}
-				$url = HTTP_INDEX."?page=accueil&action=show";
-				$time = 2000;
-				$message = "Login réussi ! Redirection...";
-				$html = "<div style='display:inline-block;'>".$message."</div>";
-				$html .= "<script>window.setTimeout(\"location=('".$url."');\",".$time.");</script>";
+				$url = HTTP_URL."/accueil";
+				header('Location: '.$url);
 			}
 			else{
 				//Sinon on affiche une erreur
-				$url = HTTP_INDEX."?page=login&action=show";
+				$url = HTTP_URL."/login";
 				$time = 2000;
 				$html = "<div>Identifiants incorrects !</div>";
 				$html .= "<script>window.setTimeout(\"location=('".$url."');\",".$time.");</script>";
@@ -28,7 +25,7 @@
 		//Pour se déconnecter
 		case 'logout':
 			session_destroy();
-			$url = HTTP_INDEX."?page=login&action=show";
+			$url = HTTP_URL."/login";
 			$time = 2000;
 			$message = "Déconnexion réussi ! Redirection...";
 			$html =  "<div style='display:inline-block;'>".$message."</div>";

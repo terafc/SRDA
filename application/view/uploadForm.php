@@ -1,5 +1,5 @@
 <div id="articles">
-	<form class="inscrire" action="<?php echo HTTP_INDEX;?>?page=documents&action=verifUpload" method="post" enctype="multipart/form-data">
+	<form class="inscrire" action="<?php echo HTTP_URL;?>/documents/verifUpload" method="post" enctype="multipart/form-data">
 		<fieldset>
 			<legend>Rendre un document</legend>
 			<ol>

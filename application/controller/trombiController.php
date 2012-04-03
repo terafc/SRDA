@@ -9,7 +9,7 @@
 			$liste = getListe($action);
 			include_once(CHEMIN_VIEW."/trombi.php");
 			break;
-		case 'LP RT':
+		case 'LP':
 			$liste = getListe($action);
 			include_once(CHEMIN_VIEW."/trombi.php");
 			break;

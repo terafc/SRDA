@@ -4,12 +4,20 @@ Options -Indexes
 
 #Redirection des erreurs
 #-----------------------
-ErrorDocument 403 /SRDA/error/403
-ErrorDocument 404 /SRDA/error/404
-ErrorDocument 500 /SRDA/error/500
+ErrorDocument 403 /SRDA/error/403.php
+ErrorDocument 404 /SRDA/error/404.php
+ErrorDocument 500 /SRDA/error/500.php
 
 # Réecriture d'URL
 #------------------
 Options FollowSymLinks
 RewriteEngine on
+RewriteCond %{HTTP_HOST} !^/application/*$ [NC]
 RewriteRule ^([a-z]+)/([a-zA-Z0-9]+)$ index.php?page=$1&action=$2 [L]
+
+#Pour ne pas faire apparaitre /show dans le lien
+RewriteRule ^accueil$ index.php?page=accueil&action=show [L]
+RewriteRule ^login$ index.php?page=login&action=show [L]
+RewriteRule ^compte$ index.php?page=compte&action=show [L]
+RewriteRule ^documents$ index.php?page=documents&action=documents [L]
+

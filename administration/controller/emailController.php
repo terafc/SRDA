@@ -29,7 +29,7 @@
 				logEmail($value,$_REQUEST['sujet'],$_REQUEST['mess'],$datePost);//ajout des logs email
 			}
 			//Redirection
-			$url = HTTP_INDEX."?page=email&action=show";
+			$url = HTTP_URL."/email/show";
 			$time = 2000;
 			$message = in_array(false,$a) ? "Une erreur s'est produite lors de l'envoi d'email... Redirection..." : count($a)." Email(s) envoyé(s). Redirection...";
 			$html = "<div class='inlineBlock alignCenter'>".$message."</div>";
@@ -42,7 +42,7 @@
 			$date = $_REQUEST['Y']."-".$_REQUEST['m']."-".$_REQUEST['d']." 00:00:00";//Données formulaire
 			$count = deleteEmail($date);
 			//Redirection
-			$url = HTTP_INDEX."?page=email&action=show";
+			$url = HTTP_URL."/email/show";
 			$time = 2000;
 			$message = "Suppression réussie ! ".$count." lignes affectées ! Redirection...";
 			$html = "<div class='inlineBlock alignCenter'>".$message."</div>";

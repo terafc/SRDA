@@ -1,11 +1,11 @@
 <?php
 	$time = 2000;//Temps avant la redirection.
 	if(isset($erreur)){
-		echo "<script>window.setTimeout(\"location=('".HTTP_INDEX."?page=documents&action=documents');\",".$time.");</script>";
+		echo "<script>window.setTimeout(\"location=('".HTTP_URL."/documents/documents');\",".$time.");</script>";
 		$text = $erreur;
 	}
 	elseif(isset($message)){
-		echo "<script>window.setTimeout(\"location=('".HTTP_INDEX."?page=accueil&action=show');\",".$time.");</script>";
+		echo "<script>window.setTimeout(\"location=('".HTTP_URL."/accueil/show');\",".$time.");</script>";
 		$text = $message;
 	}
 ?>

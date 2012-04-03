@@ -3,7 +3,7 @@ $infoUser=$_SESSION['login'];
 //print_r($infoUser);
 ?>
 <div id="articles">
-	<form class="inscrire" method="POST" action="<?php echo HTTP_INDEX;?>?page=compte&action=edit">
+	<form class="inscrire" method="POST" action="<?php echo HTTP_URL;?>/compte/edit">
 		<fieldset class="information">
 			<legend>Vos informations</legend>
 			<ol>
@@ -58,8 +58,11 @@ $infoUser=$_SESSION['login'];
 				</li>
 					<?php if (isset($result)) {
 						echo '<li>';
-						echo $result;
+						echo $result."<br><b>Vous allez être déconnecté dans un instant...<b>";
 						echo  '</li>';
+						$url=HTTP_URL."/login/logout";
+						$time=3000;
+						echo "<script>window.setTimeout(\"location=('".$url."');\",".$time.");</script>";
 					} ?>
 			</ol>
 		</fieldset>

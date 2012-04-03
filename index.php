@@ -15,7 +15,7 @@
 		&& ((!isset($_REQUEST['page']) || $_REQUEST['page']!='login')// { ET ($page n'existe pas OU différent de 'login')
 			|| (!isset($_REQUEST['action']) || !in_array($_REQUEST['action'], $testAction)))//OU ($action n'existe pas OU différent des actions possibles) } 
 		){
-		header("Location: ".HTTP_INDEX."?page=login&action=show");//Alors on le redirige vers la page de login
+		header("Location: ".HTTP_URL."/login");//Alors on le redirige vers la page de login
 	}
 ?>
 <!DOCTYPE html>
@@ -24,7 +24,9 @@
 		<title>SRDA</title>
 		<base href="/SRDA/">
 		<meta charset="UTF-8"/>
-		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/> 
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+		<link rel="icon" type="image/png" href="favicon.png" />
+		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="<?php echo HTTP_CSS;?>/style.css"/>
 		<link href="<?php echo HTTP_CSS;?>/jquery-ui-1.8.14.custom.css" rel="stylesheet" type="text/css" />
 		<script src="<?php echo HTTP_JS;?>/jquery-1.6.2.min.js" type="text/javascript"></script>
@@ -55,7 +57,7 @@
 					}
 					//Sinon si l'utilisateur est logé on indique une erreur 404
 					elseif(isset($_SESSION['login'])){
-						header("Location:index.php?page=accueil&action=show");
+						header("Location: ".HTTP_URL."/accueil");
 						include_once(CHEMIN_VIEW.'/404.php');
 					}
 					//Sinon on le redirige vers la page de login

@@ -5,7 +5,7 @@
 <br/>
 <div class="formContainer">
 	<div id="deleteEmailDate">
-		<form action="<?php echo HTTP_INDEX;?>?page=email&action=deleteEmail" method="post" enctype="multipart/form-data">
+		<form action="<?php echo HTTP_URL;?>/email/deleteEmail" method="post" enctype="multipart/form-data">
 			<div>
 				<div class="inlineBlockMiddle formTd1">Supprimer tout les Emails dont la date d'envoi est antérieur à :</div>
 				<div class="inlineBlockMiddle formTd2">
@@ -50,7 +50,7 @@
 <br/>
 <div class="formContainer">
 	<div id="showLogAll">
-			<a href="<?php echo HTTP_INDEX;?>?page=email&action=getAllLogEmail">SHOW !</a>
+			<a href="<?php echo HTTP_URL;?>/email/getAllLogEmail">SHOW !</a>
 	</div>
 </div>
 <br/>
@@ -58,7 +58,7 @@
 <br/>
 <div class="formContainer">
 	<div id="showLogOf">
-		<form method="post" action="<?php echo HTTP_INDEX;?>?page=email&action=getLogEmailOf">
+		<form method="post" action="<?php echo HTTP_URL;?>/email/getLogEmailOf">
 			<div class="formRow">
 				<div class="inlineBlockTop formTd1">Afficher tout les Logs de :</div>
 				<div class="inlineBlockTop formTd2">
@@ -76,7 +76,7 @@
 <br/>
 <div class="formContainer">
 	<div id="sendEmail">
-		<form method="post" action="<?php echo HTTP_INDEX;?>?page=email&action=sendEmail" enctype="multipart/form-data">
+		<form method="post" action="<?php echo HTTP_URL;?>/email/sendEmail" enctype="multipart/form-data">
 			<div class="formRow">
 				<div class="inlineBlockTop formTd2">Destinataire :</div>
 				<div class="inlineBlockTop formTd1">

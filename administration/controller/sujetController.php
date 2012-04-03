@@ -16,7 +16,7 @@
 			}
 			//Redirection
 			$message = "Suppression réussie ! ".$count." lignes affectées ! Redirection...";
-			$url = HTTP_INDEX."?page=sujet&action=show";
+			$url = HTTP_URL."/sujet/show";
 			$time = 2000;
 			$html = "<div class='alignCenter bold'>".$message."</div>";
 			$html .= "<script>window.setTimeout(\"location=('".$url."');\",".$time.");</script>";
@@ -46,7 +46,7 @@
 			}
 			//Redirection
 			$message = "Suppression réussie ! ".$count." lignes affectées ! Redirection...";
-			$url = HTTP_INDEX."?page=sujet&action=show";
+			$url = HTTP_URL."/sujet/show";
 			$time = 2000;
 			$html = "<div class='alignCenter bold'>".$message."</div>";
 			$html .= "<script>window.setTimeout(\"location=('".$url."');\",".$time.");</script>";

@@ -3,7 +3,7 @@
 define('SQL_DSN', 'mysql:dbname=SRDA;host=localhost');
 //Définit le nom de la base et l'adresse du serveur mysql
 define('SQL_USERNAME', 'root');
-define('SQL_PASSWORD', 'root');
+define('SQL_PASSWORD', '');
 //Définit une liste de chemins(Chemin sur le serveur)
 define('CHEMIN_GLOBAL', $_SERVER['DOCUMENT_ROOT'].'/SRDA/application/global');
 define('CHEMIN_VIEW',$_SERVER['DOCUMENT_ROOT'].'/SRDA/application/view');
@@ -22,4 +22,5 @@ define('HTTP_IMG','http://'.$_SERVER['SERVER_NAME'].'/SRDA/application/img');
 define('HTTP_LIB_PHP','http://'.$_SERVER['SERVER_NAME'].'/SRDA/application/lib_php');
 define('HTTP_XML','http://'.$_SERVER['SERVER_NAME'].'/SRDA/application/xml');
 define('HTTP_INDEX','http://'.$_SERVER['SERVER_NAME'].'/SRDA/index.php');
+define('HTTP_URL','http://'.$_SERVER['SERVER_NAME'].'/SRDA');
 ?>
