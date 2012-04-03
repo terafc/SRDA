@@ -5,7 +5,7 @@
 			<h4>Vos Sujets :</h4>
 			<div class="tableDiv">
 				<div class="scroll500">
-					<table class="tableExemple">
+					<table class="tableExemple2">
 						<tr>
 							<th>Titre</th>
 							<th>Syntaxe</th>
@@ -15,7 +15,7 @@
 						</tr>
 						<?php
 							foreach ($sujetCreator as $value) {
-								$attrTRS = " class=\"clickRow\" onclick=\"deleteSubject('".base64_encode($value['createur'])."','".base64_encode($value['id'])."')\" onmouseover=\"$(this).addClass('clickRowHover');\" onmouseout=\"$(this).removeClass('clickRowHover')\" ";
+								$attrTRS = " class=\"clickRow\" onclick=\"deleteSubject('".base64_encode($value['createur'])."','".base64_encode($value['id'])."')\" onmouseover=\"$(this).removeClass('clickRow').addClass('clickRowHover');\" onmouseout=\"$(this).removeClass('clickRowHover').addClass('clickRow');\" ";
 								echo "<tr ".$attrTRS.">";
 									echo "<td>".$value['titre']."</td>";
 									echo "<td>".$value['syntaxe']."</td>";

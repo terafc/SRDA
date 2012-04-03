@@ -4,7 +4,7 @@
 			<h4> Envoyer un fichier </h4>
 			<div class="tableDiv">
 				<div class="scroll500">
-					<table class="tableExemple">
+					<table class="tableExemple2">
 						<tr>
 							<th>Titre</th>
 							<th>DeadLine</th>
@@ -18,7 +18,7 @@
 									$attrTR = " class=\"submitedRow\" ";
 								}
 								else{//Sinon il est à rendre donc on ajoute les mouseover
-									$attrTR = "  class=\"clickRow unsubmitedRow\" onclick=\"getUploadForm('".$value['id']."','".base64_encode(serialize($_SESSION['login']))."','".base64_encode(serialize($value))."')\" onmouseover=\"$(this).addClass('clickRowHover');\" onmouseout=\"$(this).removeClass('clickRowHover')\" ";
+									$attrTR = "  class=\"clickRow unsubmitedRow\" onclick=\"getUploadForm('".$value['id']."','".base64_encode(serialize($_SESSION['login']))."','".base64_encode(serialize($value))."')\" onmouseover=\"$(this).removeClass('clickRow').addClass('clickRowHover');\" onmouseout=\"$(this).removeClass('clickRowHover').addClass('clickRow');\" ";
 								}
 								echo "<tr".$attrTR.">";
 									echo "<td>".$value['titre']."</td>";
