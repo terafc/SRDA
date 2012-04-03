@@ -33,7 +33,6 @@ function search($key) {
 	$resultat = array();
 	$resultat["Enseignant"]=$result_ens;
 	$resultat["Etudiant"]=$result_etd;
-	var_dump($resultat);
 	return $resultat;
 
 }
