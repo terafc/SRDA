@@ -256,6 +256,11 @@ color:#000000;
 background-color:#eee;
 }
 
+.tableExemple tr td {
+color:#000000;
+background-color:#eee;
+}
+
 .tableExemple tr.bis td {
 color:#000000;
 background-color:#D3D3D3;
