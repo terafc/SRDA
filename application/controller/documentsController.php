@@ -1,6 +1,7 @@
 <?php
 	if(isset($action) || isset($_GET['action'])){
 		switch($_GET['action']){
+			//Permet d'afficher la liste des sujets d'un utilisateur
 			case "documents":
 				switch($_SESSION['login']['statut']){
 					case 'ens':
@@ -23,6 +24,7 @@
 						break;
 				}
 				break;
+			//Permet d'afficher la page d'upload pour un sujet
 			case "upload":
 				switch($_SESSION['login']['statut']){
 					case 'etd':
@@ -39,12 +41,14 @@
 						break;
 				}
 				break;
+			//Pour afficher la page de suppression d'un sujet
 			case "deletePage":
 				include_once(CHEMIN_MODEL."/documentsModel.php");
 				$sujetCreator = getSujetCreator($_SESSION['login']);
 				$_SESSION['sujetCreator'] = $sujetCreator;
 				include_once(CHEMIN_VIEW."/deletePage.php");
 				break;
+			//Pour supprimer un sujet
 			case "deleteSubject":
 				//Vérification que la page a été appeler depuis deletePage.php
 				if(!isset($_POST['id_creator']) || !isset($_POST['id_subject'])){
@@ -59,14 +63,30 @@
 				$html = deleteSubject($id_creator,$id_subject);
 				include_once(CHEMIN_VIEW."/deleteSubject.php");
 				break;
-			case "uploadForm":	//Si on accède au controller par AJAX pour le formulaire d'upload.
+			//Si on accède au controller par AJAX pour le formulaire d'upload.
+			case "uploadForm":	
 				require_once("../global/config.inc.php");//Il faut charger les variables GLOBALES car il s'agit d'un appel ajax
 				$id_subject = $_REQUEST['id'];
 				$login = unserialize(base64_decode($_REQUEST['login']));
 				$infoSubject = unserialize(base64_decode($_REQUEST['subject']));
+				//On vérifie si un sujet a été uploadé :
+				$chemin = CHEMIN_FILE."/".$infoSubject['createur']."/".$infoSubject['id']."/sujet/";
+				//Fait partie de la classe SPL. Permet de faire une iteration d'un repertoire.
+				foreach (new DirectoryIterator($chemin) as $fileInfo) {
+					//Si il s'agit d'un fichier caché ou d'un fichier parent
+					if($fileInfo->isDot()){continue;}
+					//Si il s'agit du dossier
+					if($fileInfo->isDir()){continue;}
+					//Si il s'agit d'un fichier (sujet)
+					if($fileInfo->isFile()){
+						$name = $fileInfo->getFilename();
+						$completePath = HTTP_FILE."/".$infoSubject['createur']."/".$infoSubject['id']."/sujet/".$name;
+					}
+				}
 				include_once(CHEMIN_VIEW."/uploadForm.php");//Chemin différent puisqu'on y accède depuis un appel ajax
 				break;
-			case "verifUpload": //Appeler lors de l'upload d'un réel d'un fichier de rendu ou d'un sujet
+			//Appeler lors de l'upload d'un réel fichier de rendu ou d'un sujet
+			case "verifUpload": 
 				require_once(CHEMIN_MODEL."/emailModel.php");
 				include_once(CHEMIN_MODEL."/verifUploadModel.php");
 				$login = $_SESSION['login'];
@@ -96,6 +116,7 @@
 				}
 				include_once(CHEMIN_VIEW."/verifUpload.php");
 				break;
+			//Pour afficher les détails d'un sujet
 			case 'detailSubject':
 				require_once("../global/config.inc.php");//Il faut charger les variables GLOBALES car il s'agit d'un appel ajax
 				require_once(CHEMIN_GLOBAL."/connexion.inc.php");
@@ -124,6 +145,7 @@
 				}
 				include_once(CHEMIN_VIEW."/detailSubject.php");
 				break;
+			//Permet de télécharger tout les rendus actuel d'un sujet
 			case 'downloadAllRendu':
 				/*
 				 * Création de l'archive ZIP
@@ -140,6 +162,16 @@
 				foreach (new DirectoryIterator($chemin) as $fileInfo) {
 					//Si il s'agit d'un fichier caché ou d'un fichier parent
 					if($fileInfo->isDot()){continue;}
+					//Si il s'agit du dossier qui contient les sujets, on l'inclue
+					if($fileInfo->isDir() && $fileInfo->getFilename() == "sujet"){
+						foreach (new DirectoryIterator($chemin."sujet/") as $fileInfo2) {
+							if($fileInfo2->isDot()){continue;}
+							if($fileInfo2->isDir()){continue;}
+							if($fileInfo2->isFile()){
+								$files[]=$chemin."sujet/".$fileInfo2->getFilename();
+							}
+						}
+					}
 					//Si il s'agit d'un dossier
 					if($fileInfo->isDir()){continue;}
 					//Sinon si c'est un fichier.
@@ -167,6 +199,7 @@
 				fclose($open);
 				include_once(CHEMIN_VIEW."/downloadAllRendu.php");
 				break;
+			//Par défaut : Erreur
 			default:
 				include_once(CHEMIN_VIEW."/404.php");
 				break;

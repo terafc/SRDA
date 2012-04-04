@@ -7,6 +7,16 @@
 					<td><label for="titre"><strong>Titre :</strong></label></td> 
 					<td><label for="titre"><?php echo $infoSubject['titre'];?></label></td>
 				</li>
+				<?php if(isset($name)){?>
+					<li>
+						<td><label for="titre"><strong>Sujet :</strong></label></td> 
+						<td>
+							<label for="titre">
+								<a target="_blank" href="<?php echo $completePath;?>"><?php echo $name;?></a>
+							</label>
+						</td>
+					</li>
+				<?php } ?>
 				<li>
 					<td><label for="syntaxe"><strong>Syntaxe :</strong></label></td> 
 					<td><label for="syntaxe"><?php echo $infoSubject['syntaxe'];?></label></td>
