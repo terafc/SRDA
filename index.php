@@ -20,10 +20,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>SRDA</title>
+		<title>SRDA - Service de Rangement de Documents Automatisé</title>
 		<base href="/SRDA/">
 		<meta charset="UTF-8"/>
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+		<META NAME="description" CONTENT="Plateforme de rendu pour les enseignants et étudiants.">
+		<META NAME="keywords" CONTENT="SRDA  service de rangement de documents automatisé  IUT Saint Pierre Projet 2012 TP3 RT2 didier hoareau serge rivière francel marcoz florent baillif loïc toulcanon réseaux télécoms télécommunications enseignants étudiants plateforme">
+		<META NAME="Robots" CONTENT="Index,follow">
+		<META NAME="revisit-after" CONTENT="1 Day">
+		<META http-equiv="Content-Language" content="FR">
+		<META NAME="copyright" CONTENT="©">
+		<META NAME="Rating" CONTENT="Global">
+		<META NAME=="reply-to" content="serge-974@franceserv.com">
+		<META NAME="author" CONTENT="Serge Rivière, Francel Marcoz, Loïc Toulcanon, Florent Baillif">
 		<link rel="icon" type="image/png" href="<?php echo HTTP_IMG;?>/favicon.png" />
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="<?php echo HTTP_CSS;?>/style.css"/>
