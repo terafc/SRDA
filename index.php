@@ -6,10 +6,9 @@
 	session_start();
 	//Permet de définir l'heure dub serveur avec les fuseaux horaire de la réunion
 	date_default_timezone_set('Indian/Reunion');
-	
-	/*
-	 * On protège l'application en redirigeant l'utilisateur vers le login si il n'est pas authentifié
-	 */
+	/***************************************************************************************************
+	 * On protège l'application en redirigeant l'utilisateur vers le login si il n'est pas authentifié *
+	 ***************************************************************************************************/
 	$testAction = array('login','logout','show','remindMdp');//Liste des actions possible dans la page login.
 	if(!isset($_SESSION['login'])//SI L'utilisateur n'est pas authentifié
 		&& ((!isset($_REQUEST['page']) || $_REQUEST['page']!='login')// { ET ($page n'existe pas OU différent de 'login')
