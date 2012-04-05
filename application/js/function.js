@@ -50,9 +50,10 @@ function downloadAllRendu(id_subject, id_creator) {
 		success : function(html) {
 			$('.downloadAllRendu').hide();
 			//On cache la div qui contiendra la réponse du serveur
+			$('.downloadAllRendu').show();
 			$('.downloadAllRendu').html(html);
 			//On ajoute la réponse dans la div
-			window.document.getElementById("uploadZip").click();
+			$("#uploadZip").click();
 			//On simule un click sur le lien
 		}
 	});
