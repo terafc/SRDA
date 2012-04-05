@@ -96,8 +96,6 @@
 		$finalListeId = '||'.implode('||',$listeId).'||';
 		//On vérifie si l'enseignant possède déjà un dossier, sinon on en crée un.
 		if(!create_dir(CHEMIN_FILE."/".$creator."/".$id_subject)){
-			echo "1";
-			exit;
 			return 0;//Erreur
 		}
 		//Si il y a un fichier de sujet uploader
@@ -166,10 +164,10 @@
 			$message=array();
 			foreach ($listeId as $value) {
 				createNotif($value,$textNotif);//Création notification
-				$sujet = "Notification : Nouveau Sujet de Rendu reçue.";
+				$sujet = "Notification : Nouveau Sujet de Rendu reçu.";
 				$message['text']="Nouveau Sujet de Rendu (".$title.") crée par ".$login['nom']." ".$login['prenom'];
 				$message['html']="<html><body><p>Nouveau Sujet de Rendu (<strong>".$title."</strong>) crée par <strong>".$login['nom']." ".$login['prenom']."</strong></p></body></html>";
-				//sendEmail(getEmail($value),$sujet,$message,$file['mon_fichier']);//Création email
+				sendEmail(getEmail($value),$sujet,$message,$file['mon_fichier']);//Création email
 				$logEmail = logEmail($value,$sujet,$message['text'],$datePost);//Log des emails
 			}
 			/*
@@ -180,7 +178,7 @@
 			$sujet = "Notification : Création d'un sujet.";
 			$message['text']="Nouveau Sujet de Rendu (".$title.") crée par ".$login['nom']." ".$login['prenom'].".";
 			$message['html']="<html><body><p>Nouveau Sujet de Rendu (<strong>".$title."</strong>) crée par <strong>".$login['nom']." ".$login['prenom']."</strong>.</p></body></html>";
-			//sendEmail($login['email'],$sujet,$message,"");//Création email
+			sendEmail($login['email'],$sujet,$message,"");//Création email
 			$logEmail = logEmail($login['id'],$sujet,$message['text'],$datePost);//Log des emails
 			
 			return 1;//Insertion réussie !
@@ -263,6 +261,9 @@
 					return 0;//Erreur
 				}
 				else{
+					//On change son chemin d'accès
+					$file['mon_fichier']['tmp_name']=$dossier."/".$infoCurrSubject['syntaxe'].$extension;
+					$file['mon_fichier']['name']=$infoCurrSubject['syntaxe'].$extension;
 					//Le Fichier est Uploadé !
 					$url = $dossier."/".$infoCurrSubject['syntaxe'].$extension;//URL du fichier
 					if(!insertFile($login['id'], $id_subject,$url,$size,$type,$datePost)){//Insertion en BDD des détails de l'upload				
@@ -290,7 +291,7 @@
 						$sujet = "Notification : Rendu reçu.";
 						$message['text']="Rendu de ".$login['nom']." ".$login['prenom']." reçu pour le sujet ".$infoCurrSubject['titre'].".";
 						$message['html']="<html><body><p>Rendu de <strong>".$login['nom']." ".$login['prenom']."</strong> reçu pour le sujet <strong>".$infoCurrSubject['titre']."</strong>.</p></body></html>";
-						//sendEmail($login['email'],$sujet,$message,$file['mon_fichier']);//Création email
+						sendEmail($login['email'],$sujet,$message,$file['mon_fichier']);//Création email
 						$logEmail = logEmail($login['id'],$sujet,$message['text'],$datePost);//Log des emails
 						
 						return 1;//Succès !
