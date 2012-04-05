@@ -55,20 +55,14 @@ function getTrombi($half_path, $nom) {
 	//var_dump(is_file('srda.franceserv.com/application/img/trombi/rt2/27001248.png'));
 	if (is_file($test)) {
 		$url = '<a class="photo_trombi" href="javascript:void(0);"
-				onMouseOver="return overlib(\'\',
-				WIDTH, 84, HEIGHT, 113,LEFT,OFFSETX,30,OFFSETY,-50,BORDER,\'2\',
-				BGCOLOR,\'#2F8CAE\',
-				FGBACKGROUND,\'' . $path . '\');"
+				onMouseOver="return overlib(\'<img class=\\\'imgTrombi\\\' src=\\\''.$path.'\\\'/>\');"
 				onMouseOut="return nd();">' . $nom . '</a>';
 		return $url;
 	}
 	else {
 		$path = HTTP_IMG.'/trombi/profil.png';
 		$url = '<a class="photo_trombi" href="javascript:void(0);"
-				onMouseOver="return overlib(\'\',
-				WIDTH, 84, HEIGHT, 113,LEFT,OFFSETX,30,OFFSETY,-50,BORDER,\'2\',
-				BGCOLOR,\'#2F8CAE\',
-				FGBACKGROUND,\'' . $path . '\');"
+				onMouseOver="return overlib(\'<img class=\\\'imgTrombi\\\' src=\\\''.$path.'\\\'/>\');"
 				onMouseOut="return nd();">' . $nom . '</a>';
 		return $url;
 	}
