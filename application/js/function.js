@@ -1,6 +1,6 @@
 //Déclaration de variable globale
-var HTTP_CONTROLLER = "http://localhost/SRDA/application/controller";
-var HTTP_INDEX = "http://localhost/SRDA/index.php";
+var HTTP_CONTROLLER = "http://"+window.location.hostname+"/application/controller";
+var HTTP_INDEX = "http://"+window.location.hostname+"/index.php";
 
 function getListe(search) {
 	if(search == null || search == false || search == "") {
@@ -52,7 +52,7 @@ function downloadAllRendu(id_subject, id_creator) {
 			//On cache la div qui contiendra la réponse du serveur
 			$('.downloadAllRendu').html(html);
 			//On ajoute la réponse dans la div
-			document.getElementById("uploadZip").click();
+			window.document.getElementById("uploadZip").click();
 			//On simule un click sur le lien
 		}
 	});
