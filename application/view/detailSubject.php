@@ -3,7 +3,7 @@
 		<h4>Titre : <i><?php echo $currSujInfo['titre'];?></i></h4>
 	</div>
 	<div class="scroll500">
-		<table class="tableExemple">
+		<table class="tableExemple2">
 			<tr>
 				<th>Nom & Prénom</th>
 				<th>DatePost</th>
