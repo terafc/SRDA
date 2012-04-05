@@ -11,8 +11,8 @@
 					<td>
 						<?php
 						if(!empty($valeur['promo'])){
-							$path = 'application/img/trombi/' . $valeur['promo'] . '/' . $valeur['id'] . '.png';
-							echo getTrombi($path,$valeur['nom']);
+							$half_path=strtolower($valeur['promo']).'/'.$valeur['id'].'.png';
+							echo getTrombi($half_path,$valeur['nom']);
 						}
 						else{
 							echo $valeur['nom'];

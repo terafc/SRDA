@@ -46,9 +46,14 @@ function getListe($promo) {
 	//On retourne le jeu de résultat.
 }
 
-function getTrombi($path, $nom) {
+function getTrombi($half_path, $nom) {
 	$url = '';
-	if (is_file($path)) {
+	//var_dump($half_path);
+	$path=HTTP_IMG.'/trombi/'.$half_path;
+	$test=CHEMIN_IMG.'/trombi/'.$half_path;
+	//var_dump($path);
+	//var_dump(is_file('srda.franceserv.com/application/img/trombi/rt2/27001248.png'));
+	if (is_file($test)) {
 		$url = '<a class="photo_trombi" href="javascript:void(0);"
 				onMouseOver="return overlib(\'\',
 				WIDTH, 84, HEIGHT, 113,LEFT,OFFSETX,30,OFFSETY,-50,BORDER,\'2\',
@@ -58,7 +63,7 @@ function getTrombi($path, $nom) {
 		return $url;
 	}
 	else {
-		$path = 'application/img/trombi/profil.png';
+		$path = HTTP_IMG.'/trombi/profil.png';
 		$url = '<a class="photo_trombi" href="javascript:void(0);"
 				onMouseOver="return overlib(\'\',
 				WIDTH, 84, HEIGHT, 113,LEFT,OFFSETX,30,OFFSETY,-50,BORDER,\'2\',
