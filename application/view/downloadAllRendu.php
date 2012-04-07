@@ -1,1 +1,1 @@
-<a id='uploadZip' href='<?php echo $completePath;?>'>DL</a>
+<a id='uploadZip' href='<?php echo $completePath;?>'>Cliquer ici pour télécharger l'archive !</a>

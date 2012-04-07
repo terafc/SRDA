@@ -28,17 +28,15 @@
 	/***************************************************************
 	 * Définition de la configuration et des fonctions nécessaire. *
 	 ***************************************************************/
-	/*
 	// Identifiants pour la base de données. Nécessaires a PDO2.
-	define('SQL_DSN', 'mysql:dbname=SRDA;host=localhost');
+	define('SQL_DSN', 'mysql:dbname=serge-974-db1;host=ftp.franceserv.fr');
 	//Définit le nom de la base et l'adresse du serveur mysql
-	define('SQL_USERNAME', 'root');
-	define('SQL_PASSWORD', '');
-	*/
+	define('SQL_USERNAME', 'serge-974');
+	define('SQL_PASSWORD', 'Reun10n');
 	/*********************************************
 	 * Classe implémentant le singleton pour PDO *
 	 *********************************************/
-	/*class PDO2 extends PDO {
+	class PDO2 extends PDO {
 		private static $_instance;
 		//Constructeur : héritage public obligatoire par héritage de PDO
 		public function __construct( ) {}
@@ -68,7 +66,7 @@
 		}
 		return $bdd;
 	}
-	*/
+	
 	//Permet d'obtenir la liste des notifications pour un id donné.
 	function getSubjectNearDeadline(){
 		$bdd=connexionBase();//Connexion à la BDD

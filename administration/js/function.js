@@ -1,6 +1,7 @@
 //Déclaration de variable globale
-var HTTP_CONTROLLER = "http://localhost/SRDA/administration/controller";
-var HTTP_INDEX = "http://localhost/SRDA/administration/indexAdministration.php";
+var HTTP_CONTROLLER = "http://"+window.location.hostname+"/administration/controller";
+var HTTP_INDEX = "http://"+window.location.hostname+"/administration/indexAdministration.php";
+
 
 //Permet de confirmer la réinitialisation de l'application :
 function confirmReset(){

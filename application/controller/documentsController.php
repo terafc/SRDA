@@ -71,16 +71,18 @@
 				$infoSubject = unserialize(base64_decode($_REQUEST['subject']));
 				//On vérifie si un sujet a été uploadé :
 				$chemin = CHEMIN_FILE."/".$infoSubject['createur']."/".$infoSubject['id']."/sujet/";
-				//Fait partie de la classe SPL. Permet de faire une iteration d'un repertoire.
-				foreach (new DirectoryIterator($chemin) as $fileInfo) {
-					//Si il s'agit d'un fichier caché ou d'un fichier parent
-					if($fileInfo->isDot()){continue;}
-					//Si il s'agit du dossier
-					if($fileInfo->isDir()){continue;}
-					//Si il s'agit d'un fichier (sujet)
-					if($fileInfo->isFile()){
-						$name = $fileInfo->getFilename();
-						$completePath = HTTP_FILE."/".$infoSubject['createur']."/".$infoSubject['id']."/sujet/".$name;
+				if(is_dir($chemin)){
+					//Fait partie de la classe SPL. Permet de faire une iteration d'un repertoire.
+					foreach (new DirectoryIterator($chemin) as $fileInfo) {
+						//Si il s'agit d'un fichier caché ou d'un fichier parent
+						if($fileInfo->isDot()){continue;}
+						//Si il s'agit du dossier
+						if($fileInfo->isDir()){continue;}
+						//Si il s'agit d'un fichier (sujet)
+						if($fileInfo->isFile()){
+							$name = $fileInfo->getFilename();
+							$completePath = HTTP_FILE."/".$infoSubject['createur']."/".$infoSubject['id']."/sujet/".$name;
+						}
 					}
 				}
 				include_once(CHEMIN_VIEW."/uploadForm.php");//Chemin différent puisqu'on y accède depuis un appel ajax

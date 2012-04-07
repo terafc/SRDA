@@ -47,7 +47,7 @@ if (typeof ol_closefont=='undefined') var ol_closefont="Verdana,Arial,Helvetica"
 if (typeof ol_textsize=='undefined') var ol_textsize="1";
 if (typeof ol_captionsize=='undefined') var ol_captionsize="1";
 if (typeof ol_closesize=='undefined') var ol_closesize="1";
-if (typeof ol_width=='undefined') var ol_width="200";
+if (typeof ol_width=='undefined') var ol_width="auto";
 if (typeof ol_border=='undefined') var ol_border="1";
 if (typeof ol_cellpad=='undefined') var ol_cellpad=2;
 if (typeof ol_offsetx=='undefined') var ol_offsetx=10;
@@ -60,7 +60,7 @@ if (typeof ol_close=='undefined') var ol_close="Close";
 if (typeof ol_hpos=='undefined') var ol_hpos=RIGHT;
 if (typeof ol_status=='undefined') var ol_status="";
 if (typeof ol_autostatus=='undefined') var ol_autostatus=0;
-if (typeof ol_height=='undefined') var ol_height=-1;
+if (typeof ol_height=='undefined') var ol_height="auto";
 if (typeof ol_snapx=='undefined') var ol_snapx=0;
 if (typeof ol_snapy=='undefined') var ol_snapy=0;
 if (typeof ol_fixx=='undefined') var ol_fixx=-1;
